@@ -1,0 +1,28 @@
+# Example .gitignore file for your config dir.
+# A * ensures that everything will be ignored.
+.google.token
+.google_maps_location_sharing
+alexa_media.consult@techdesk.org.pickle
+.google_maps_location_sharing.cookies.hickoryhome19_gmail_com
+esphome
+appdaemon.yaml
+cameras.yaml
+google_calendars.yaml
+
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+!*.yml
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+.google_maps_location_sharing.cookies
+alexa_media.consult@techdesk.org
