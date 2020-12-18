@@ -1,0 +1,185 @@
+  climate:
+    name: "Climate"
+    entities:
+      - climate.hallway_thermostat
+  house_general:
+    name: "General House options"
+    entities:
+      - sensor.house_mode
+      - input_boolean.house_alarm_enable
+      - input_datetime.house_wakeup_time
+      - sensor.nextsunrise
+      - sensor.nextsunset
+      - input_boolean.occupied
+      - input_boolean.cjhome
+      - input_boolean.jenhome
+      - input_boolean.torihome
+      - input_boolean.sebhome
+      - input_boolean.houseguests
+      - input_boolean.vacation
+      - cover.pole_barn
+      - binary_sensor.pole_barn_myq_gateway
+      - input_boolean.alexa_cave_donotdisturb
+      - input_boolean.alexa_bedroom_donotdisturb
+      - input_boolean.alexa_kitchen_donotdisturb
+  presence:
+    name: "Presence"
+    entities:
+    - sensor.people_home
+    - person.cj
+    - person.jen
+    - person.tori
+    - person.seb
+    - person.guest
+  sensors:
+    name: "Sensors"
+    entities:
+    - binary_sensor.multisensor_motion
+    - sensor.multisensor_temperature
+    - sensor.multisensor_humidity
+    - sensor.multisensor2_temperature
+    - sensor.multisensor2_humidity
+    - sensor.hallway_humidity
+    - binary_sensor.leak_sensor_1_ch_a
+    - binary_sensor.leak_sensor_2_ch_a
+  weather:
+    name: "Weather"
+    entities:
+    - sun.sun
+    - sensor.nws_alert_count
+    - sensor.oakland
+  waste:
+    name: "Waste Mgmt"
+    entities:
+      - sensor.garbage
+      - sensor.recycle
+      - sensor.yard_waste
+  cj_alarm_clock:
+    name: "CJ Alarm clock"
+    entities: # Add all entities here that should be part of the widget
+      - input_boolean.cj_alarm_enable
+      - input_select.cj_alarm_autoenable
+      - input_select.cj_alarm_automode
+      - input_boolean.cj_alarm_running
+      - input_boolean.cj_alarm_snooze
+      - input_boolean.cj_alarm_radio
+      - input_datetime.cj_wakeup_time
+      - light.cj_wake_light
+  jen_alarm_clock:
+    name: "Jen Alarm clock"
+    entities: # Add all entities here that should be part of the widget
+      - input_boolean.jen_alarm_enable
+      - input_select.jen_alarm_autoenable
+      - input_select.jen_alarm_automode
+      - input_boolean.jen_alarm_running
+      - input_boolean.jen_alarm_snooze
+      - input_boolean.jen_alarm_radio
+      - input_datetime.jen_wakeup_time
+      - light.jen_wake_light
+  light_control:
+    name: "Lights"
+    entities:
+      - switch.shelly_shsw_pm_c45421
+      - switch.shelly_shsw_pm_c44770
+      - switch.shelly_shsw_1_55e7ad
+      - switch.shelly_shsw_1_55f0fe
+      - switch.shelly_shsw_1_93f489
+      - light.shelly_shblb_1_bc8574
+      - light.shelly_shblb_1_bc85f4
+      - input_select.exterior_light_schedule
+      - input_select.nightlite_override
+      - input_select.room_nightlite_override
+  system_status:
+    name: "System Status"
+    entities:
+    - sensor.hacs
+    - binary_sensor.updater
+    - sensor.uptime
+    - binary_sensor.remote_ui
+    - input_boolean.backup_trigger
+    - input_boolean.node_red
+    - sensor.node_red
+    - input_boolean.maintenance_mode
+    - switch.sensor_restart
+    - switch.sensor_restart_2
+  comfort_settings:
+    name: "Comfort Settings"
+    entities:
+    - input_number.heat_comfort_temp
+    - input_number.heat_sleep_temp
+    - input_number.heat_eco_temp
+    - input_number.cool_comfort_temp
+    - input_number.cool_sleep_temp
+    - input_number.cool_eco_temp
+    - input_boolean.cj_notify
+    - input_boolean.jen_notify
+  furnace_filter_tracking:
+    name: "Furnace Filter Tracking"
+    entities:
+    - sensor.hvac_action
+    - input_number.hvac_runtime
+    - sensor.average_total_runtime_week
+    - sensor.furnace_filter_days_remaining
+    - input_text.furnace_filter
+    - input_number.replacement_threshold
+    - sensor.furnace_filter_life
+    - sensor.cooling_before_last_filter_change
+    - sensor.cooling_time_last_7_days
+    - sensor.cooling_time_yesterday
+    - sensor.heating_before_last_filter_change
+    - sensor.heating_time_last_7_days
+    - sensor.heating_time_yesterday
+  power_consumption:
+    name: "Energy Usage"
+    entities:
+    - sensor.shelly_shsw_pm_c45421_current_consumption
+    - sensor.shelly_shsw_pm_c45421_total_consumption
+    - sensor.shelly_shsw_pm_c44770_current_consumption
+    - sensor.shelly_shsw_pm_c44770_total_consumption
+  system:
+    name: "System status"
+    entities:
+    - sensor.cpu_temperature
+    - sensor.processor_use
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.load_15m
+    - sensor.memory_use_percent
+    - sensor.disk_use_percent_home
+    - sensor.network_throughput_in_eth0
+  wireguard_vpn:
+    name: "WireGuard Client Status"
+    entities:
+    - sensor.wireguard
+    - sensor.wireguard_cjphone
+    - sensor.wireguard_jenphone
+    - sensor.wireguard_cjlaptop
+    - sensor.wireguard_jenlaptop
+  printers:
+    name: "Canon MX410 Ink Levels"
+    entities:
+    - sensor.canon_mx410_series_black_ink_level
+    - sensor.canon_mx410_series_color_ink_level
+  cj_phone_state:
+    name: "CJ Phone State"
+    entities:
+    - sensor.cjg8phone_battery_level
+    - sensor.cjg8phone_battery_state
+    - sensor.cjg8phone_geocoded_location
+    - sensor.cjg8phone_wifi_connection
+  travel_time:
+    name: "Travel time"
+    entities:
+    - sensor.cj_to_home
+    - sensor.jen_to_home
+  cave_climate:
+    name: "Cave climate"
+    entities:
+    - sensor.cave_temperature
+    - sensor.cave_humidity
+  cave_lights:
+    name: "Cave Lights"
+    entities:
+    - light.cave_main
+    - light.cave_aux
+

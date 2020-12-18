@@ -1,0 +1,78 @@
+  house_mode:
+    name: House Mode
+    options:
+      - "Morning"
+      - "Day"
+      - "Afternoon"
+      - "Evening"
+      - "Night"
+      - "Sleep"
+  cj_alarm_autoenable:
+    name: Auto Alarm Enable
+    options:
+      - "Weekdays"
+      - "Weekends"
+      - "Both"
+      - "None"
+    initial: "None"
+  cj_alarm_automode:
+    name: Auto Alarm Mode
+    options:
+      - "Alarm Only"
+      - "Alarm + Radio"
+    initial: "Alarm Only"
+  jen_alarm_automode:
+    name: Auto Alarm Mode
+    options:
+      - "Alarm Only"
+      - "Alarm + Radio"
+    initial: "Alarm Only"
+  jen_alarm_autoenable:
+    name: Auto Alarm Enable
+    options:
+      - "Weekdays"
+      - "Weekends"
+      - "Both"
+      - "None"
+    initial: "None"
+  exterior_light_schedule:
+    name: Ext Light Override
+    options:
+      - "Auto"
+      - "On"
+      - "Off"
+      - "Manual"
+      - "Disabled"
+  nightlite_override:
+    name: General Nightlight Override
+    options:
+      - "Auto"
+      - "On"
+      - "Off"
+      - "Manual"
+      - "Disabled"
+  room_nightlite_override:
+    name: Room Nightlight Override
+    options:
+      - "Auto"
+      - "On"
+      - "Off"
+      - "Manual"
+      - "Disabled"
+  cj_wfh_override:
+    name: "CJ WFH Override"
+    options:
+      - "Auto"
+      - "On"
+      - "Off"
+      - "Manual"
+      - "Disabled"
+  jen_wfh_override:
+    name: "Jen WFH Override"
+    options:
+      - "Auto"
+      - "On"
+      - "Off"
+      - "Manual"
+      - "Disabled"
+

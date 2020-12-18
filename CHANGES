@@ -1,0 +1,9 @@
+CHANGES
+
+v2020.11.0.0
+- Added Holiday lighting control
+- Added Furnace filter tracking automation to node-red. Automation/script removed from filter package
+- Updated HA to 0.118.4
+- Added calendar cards to display
+
+v2020.3.0.0

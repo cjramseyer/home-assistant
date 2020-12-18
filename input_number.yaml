@@ -1,0 +1,54 @@
+  heat_comfort_temp:
+    name: " Heat Comfort Temp"
+    min: 65
+    max: 72
+    step: 1
+    initial: 68
+    mode: box
+    unit_of_measurement: deg
+    icon: mdi:thermometer
+  heat_sleep_temp:
+    name: "Heat Sleep Temp"
+    min: 62
+    max: 68
+    step: 1
+    initial: 65
+    mode: box
+    unit_of_measurement: deg
+    icon: mdi:thermometer
+  heat_eco_temp:
+    name: "Heat Eco Temp"
+    min: 60
+    max: 68
+    step: 1
+    initial: 65
+    mode: box
+    unit_of_measurement: deg
+    icon: mdi:thermometer
+  cool_comfort_temp:
+    name: "Cool Comfort Temp"
+    min: 70
+    max: 85
+    step: 1
+    initial: 75
+    mode: box
+    unit_of_measurement: deg
+    icon: mdi:thermometer
+  cool_sleep_temp:
+    name: "Cool Sleep Temp"
+    min: 70
+    max: 85
+    step: 1
+    initial: 75
+    mode: box
+    unit_of_measurement: deg
+    icon: mdi:thermometer
+  cool_eco_temp:
+    name: "Cool Eco Temp"
+    min: 75
+    max: 85
+    step: 1
+    initial: 78
+    mode: box
+    unit_of_measurement: deg
+    icon: mdi:thermometer

@@ -1,0 +1,10 @@
+input_select.house_mode:
+  hidden: true
+device_tracker.google_maps_103298389060901230903:
+  hidden: true
+device_tracker.google_maps_104665180205749213751:
+  hidden: true
+device_tracker.google_maps_108388660046996653768:
+  hidden: true
+device_tracker.google_maps_109285548108349468571:
+  hidden: true

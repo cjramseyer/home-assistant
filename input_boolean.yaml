@@ -1,0 +1,101 @@
+  occupied:
+    name: Home Occupied
+    initial: off
+    icon: mdi:home
+  cjhome:
+    name: CJ Home
+    initial: off
+    icon: mdi:account
+  jenhome:
+    name: Jen Home
+    initial: off
+    icon: mdi:account
+  torihome:
+    name: Tori Home
+    initial: off
+    icon: mdi:account
+  sebhome:
+    name: Seb Home
+    initial: off
+    icon: mdi:account
+  houseguests:
+    name: House Guests
+    initial: off
+    icon: mdi:account-group
+  vacation:
+    name: Vacation Mode
+    initial: off
+    icon: mdi:airplane
+  cj_alarm_enable:
+    name: "Alarm enable"
+    initial: off # In case of reboot, default to off
+    icon: mdi:calendar-blank
+  cj_alarm_running:
+    name: "Alarm active"
+    initial: off # I disable the system on default on weekends
+    icon: mdi:calendar-blank
+     # Used by Automation to enable Snooze
+  cj_alarm_snooze:
+    name: Snooze
+    initial: off
+    icon: mdi:alarm-snooze
+  cj_alarm_radio:
+    name: Radio
+    initial: off
+    icon: mdi:radio
+  jen_alarm_enable:
+    name: "Alarm enable"
+    initial: off # In case of reboot, default to off
+    icon: mdi:calendar-blank
+  jen_alarm_running:
+    name: "Alarm active"
+    initial: off # I disable the system on default on weekends
+    icon: mdi:calendar-blank
+     # Used by Automation to enable Snooze
+  jen_alarm_snooze:
+    name: Snooze
+    initial: off
+    icon: mdi:alarm-snooze
+  jen_alarm_radio:
+    name: Radio
+    initial: off
+    icon: mdi:radio
+  house_alarm_enable:
+    name: "House Alarm Clock"
+    initial: off
+    icon: mdi:calendar-blank
+  node_red:
+    name: Node Red Watchdog
+    initial: on
+  alexa_cave_donotdisturb:
+    name: "Alexa Cave DND"
+    initial: off
+  alexa_bedroom_donotdisturb:
+    name: "Alexa Bedroom DND"
+    initial: off
+  alexa_kitchen_donotdisturb:
+    name: "Alexa Kitchen DND"
+    initial: off
+  alexa_office_donotdisturb:
+    name: "Alexa Office DND"
+    initial: off
+  cj_notify:
+    name: "CJ Notifications"
+  jen_notify:
+    name: "Jen Notifications"
+  maintenance_mode:
+    name: "Maintenance Mode"
+  backup_trigger:
+    name: "Backup Trigger"
+  dropbox_trigger:
+    name: "Dropbox Trigger"
+  auto_lights_off:
+    name: "Auto Lights Off"
+  nightlight_motion_enabled:
+    name: "Nightlight Motion Enabled"
+  cj_wfh:
+    name: "CJ WFH Mode"
+  jen_wfh:
+    name: "Jen WFH Mode"
+  change_filter:
+    name: "Change furnace filter"

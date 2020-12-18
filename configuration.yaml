@@ -1,0 +1,114 @@
+homeassistant:
+    customize: !include customize.yaml
+    packages: !include_dir_named packages
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+cloud:
+
+http:
+    ip_ban_enabled: true
+    login_attempts_threshold: 10
+
+recorder:
+    purge_keep_days: 5
+    purge_interval: 1
+    exclude:
+        domains:
+            - calendar
+            - camera
+            - automation
+            - script
+            - weather
+            - updater
+            - remote
+            - sun
+            - media_player
+        entities:
+            - sensor.lastboot
+            - sensor.garbage
+            - sensor.recycle
+            - sensor.yard_waste
+            - sensor.wireguard
+            - sensor.wireguard_cjphone
+            - sensor.wireguard_jenphone
+            - sensor.wireguard_cjlaptop
+            - sensor.wireguard_jenlaptop
+            - sensor.processor_use
+            - sensor.network_throughput_in_eth0
+            - sensor.memory_use_percent
+            - sensor.load_15m
+            - sensor.load_5m
+            - sensor.load_1m
+            - sensor.house_mode
+            - sensor.uptime
+            - sensor.nextsunrise
+            - sensor.nextsunset
+            - sensor.hacs
+            - sensor.cpu_temperature
+            
+influxdb:
+    host: !secret influx_server
+    port: 8086
+    database: !secret influx_db
+    username: !secret influx_user
+    password: !secret influx_pass
+    ssl: false
+    max_retries: 3
+    default_measurement: state
+    tags:
+        instance: prod
+        source: hass
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_prod
+
+device_tracker:
+  - platform: google_maps
+    username: !secret presence_user
+
+google:
+    client_id: !secret google_cal_clientid_prod
+    client_secret: !secret google_cal_clientsecret_prod
+
+cover:
+  platform: myq
+  username: !secret myq_user
+  password: !secret myq_pass
+  type: liftmaster
+
+badnest:
+  issue_token: !secret badnest_token
+  cookie: !secret badnest_cookie
+  region: us
+
+climate:
+  platform: badnest
+  scan_interval: 10
+
+sensor: !include sensors.yaml
+input_boolean: !include input_boolean.yaml
+input_datetime: !include input_datetime.yaml
+input_number: !include input_number.yaml
+input_select: !include input_select.yaml
+
+camera: !include cameras.yaml
+
+group: !include groups.yaml
