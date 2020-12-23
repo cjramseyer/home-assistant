@@ -13,11 +13,3 @@
     has_time: true
     has_date: false
     initial: "09:00"
-  #front_doorbell_time:
-  #  name: "Front Doorbell time"
-  #  has_time: true
-  #  has_date: true
-  #side_doorbell_time:
-  #  name: "Side Doorbell time"
-  #  has_time: true
-  #  has_date: true

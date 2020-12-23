@@ -16,7 +16,6 @@ http:
 
 recorder:
     purge_keep_days: 5
-    purge_interval: 1
     exclude:
         domains:
             - calendar
@@ -50,23 +49,10 @@ recorder:
             - sensor.nextsunset
             - sensor.hacs
             - sensor.cpu_temperature
-            
-influxdb:
-    host: !secret influx_server
-    port: 8086
-    database: !secret influx_db
-    username: !secret influx_user
-    password: !secret influx_pass
-    ssl: false
-    max_retries: 3
-    default_measurement: state
-    tags:
-        instance: prod
-        source: hass
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+#http:
+#  base_url: hickoryhome2.duckdns.org:8123
 
 # Text to speech
 tts:
@@ -87,12 +73,6 @@ device_tracker:
 google:
     client_id: !secret google_cal_clientid_prod
     client_secret: !secret google_cal_clientsecret_prod
-
-cover:
-  platform: myq
-  username: !secret myq_user
-  password: !secret myq_pass
-  type: liftmaster
 
 badnest:
   issue_token: !secret badnest_token

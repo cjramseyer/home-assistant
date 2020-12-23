@@ -1,5 +1,10 @@
 CHANGES
 
+v2020.12.0.0
+- Updated README format
+- Added CODEOWNERS file
+- Updated running configuration to 12/23/2020
+
 v2020.11.0.0
 - Added Holiday lighting control
 - Added Furnace filter tracking automation to node-red. Automation/script removed from filter package

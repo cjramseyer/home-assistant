@@ -67,11 +67,11 @@
   node_red:
     name: Node Red Watchdog
     initial: on
-  alexa_cave_donotdisturb:
-    name: "Alexa Cave DND"
+  alexa_media_room_donotdisturb:
+    name: "Alexa Media Room DND"
     initial: off
-  alexa_bedroom_donotdisturb:
-    name: "Alexa Bedroom DND"
+  alexa_master_bedroom_donotdisturb:
+    name: "Alexa Master Bedroom DND"
     initial: off
   alexa_kitchen_donotdisturb:
     name: "Alexa Kitchen DND"
@@ -99,3 +99,11 @@
     name: "Jen WFH Mode"
   change_filter:
     name: "Change furnace filter"
+  exterior_light_display:
+    name: "Exterior Light Display"
+  cj_busy:
+    name: "CJ Busy"
+  jen_busy:
+    name: "Jen Busy"
+  trigger_coffee:
+    name: "Trigger Coffee"

@@ -17,8 +17,6 @@
       - input_boolean.sebhome
       - input_boolean.houseguests
       - input_boolean.vacation
-      - cover.pole_barn
-      - binary_sensor.pole_barn_myq_gateway
       - input_boolean.alexa_cave_donotdisturb
       - input_boolean.alexa_bedroom_donotdisturb
       - input_boolean.alexa_kitchen_donotdisturb
@@ -47,7 +45,6 @@
     entities:
     - sun.sun
     - sensor.nws_alert_count
-    - sensor.oakland
   waste:
     name: "Waste Mgmt"
     entities:
@@ -76,21 +73,8 @@
       - input_boolean.jen_alarm_radio
       - input_datetime.jen_wakeup_time
       - light.jen_wake_light
-  light_control:
-    name: "Lights"
-    entities:
-      - switch.shelly_shsw_pm_c45421
-      - switch.shelly_shsw_pm_c44770
-      - switch.shelly_shsw_1_55e7ad
-      - switch.shelly_shsw_1_55f0fe
-      - switch.shelly_shsw_1_93f489
-      - light.shelly_shblb_1_bc8574
-      - light.shelly_shblb_1_bc85f4
-      - input_select.exterior_light_schedule
-      - input_select.nightlite_override
-      - input_select.room_nightlite_override
-  system_status:
-    name: "System Status"
+  maintenance_status:
+    name: "Maintenance Status"
     entities:
     - sensor.hacs
     - binary_sensor.updater
@@ -101,7 +85,6 @@
     - sensor.node_red
     - input_boolean.maintenance_mode
     - switch.sensor_restart
-    - switch.sensor_restart_2
   comfort_settings:
     name: "Comfort Settings"
     entities:
@@ -129,57 +112,27 @@
     - sensor.heating_before_last_filter_change
     - sensor.heating_time_last_7_days
     - sensor.heating_time_yesterday
-  power_consumption:
-    name: "Energy Usage"
-    entities:
-    - sensor.shelly_shsw_pm_c45421_current_consumption
-    - sensor.shelly_shsw_pm_c45421_total_consumption
-    - sensor.shelly_shsw_pm_c44770_current_consumption
-    - sensor.shelly_shsw_pm_c44770_total_consumption
   system:
     name: "System status"
     entities:
     - sensor.cpu_temperature
-    - sensor.processor_use
+    - sensor.processor_use_percent
     - sensor.load_1m
     - sensor.load_5m
     - sensor.load_15m
     - sensor.memory_use_percent
     - sensor.disk_use_percent_home
     - sensor.network_throughput_in_eth0
-  wireguard_vpn:
-    name: "WireGuard Client Status"
-    entities:
-    - sensor.wireguard
-    - sensor.wireguard_cjphone
-    - sensor.wireguard_jenphone
-    - sensor.wireguard_cjlaptop
-    - sensor.wireguard_jenlaptop
-  printers:
-    name: "Canon MX410 Ink Levels"
-    entities:
-    - sensor.canon_mx410_series_black_ink_level
-    - sensor.canon_mx410_series_color_ink_level
-  cj_phone_state:
-    name: "CJ Phone State"
-    entities:
-    - sensor.cjg8phone_battery_level
-    - sensor.cjg8phone_battery_state
-    - sensor.cjg8phone_geocoded_location
-    - sensor.cjg8phone_wifi_connection
   travel_time:
     name: "Travel time"
     entities:
     - sensor.cj_to_home
     - sensor.jen_to_home
-  cave_climate:
-    name: "Cave climate"
+  cave:
+    name: "Cave"
     entities:
     - sensor.cave_temperature
     - sensor.cave_humidity
-  cave_lights:
-    name: "Cave Lights"
-    entities:
     - light.cave_main
     - light.cave_aux
 

@@ -16,15 +16,6 @@
     mode: box
     unit_of_measurement: deg
     icon: mdi:thermometer
-  heat_eco_temp:
-    name: "Heat Eco Temp"
-    min: 60
-    max: 68
-    step: 1
-    initial: 65
-    mode: box
-    unit_of_measurement: deg
-    icon: mdi:thermometer
   cool_comfort_temp:
     name: "Cool Comfort Temp"
     min: 70
@@ -37,15 +28,6 @@
   cool_sleep_temp:
     name: "Cool Sleep Temp"
     min: 70
-    max: 85
-    step: 1
-    initial: 75
-    mode: box
-    unit_of_measurement: deg
-    icon: mdi:thermometer
-  cool_eco_temp:
-    name: "Cool Eco Temp"
-    min: 75
     max: 85
     step: 1
     initial: 78
