@@ -1,4 +1,4 @@
-![HALogo](https://github.com/cjramseyer/home-assistant/images/1200px-Home_Assistant_Logo.svg.png)
+![HALogo](https://github.com/cjramseyer/home-assistant/blob/main/images/icon.png)
 
 # Home Assistant Configuration
 
