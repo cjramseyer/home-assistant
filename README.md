@@ -1,3 +1,5 @@
+![HALogo](https://github.com/cjramseyer/home-assistant/images/1200px-Home_Assistant_Logo.svg.png)
+
 # Home Assistant Configuration
 
 This is the source of my configuration for Home Assistant
