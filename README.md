@@ -6,6 +6,12 @@ This is the source of my configuration for Home Assistant
 
 ----
 
+## What is Home Assistant
+
+Home Assistant is a free and open-source home automation software designed to be the central home automation control system for controlling smart home technology. Home Assistant "core" application software itself is written in Python and its main focus is on local-control and privacy.
+
+----
+
 ## Current Configuration
 
 - Home Assistant Version: v2020.12.1
