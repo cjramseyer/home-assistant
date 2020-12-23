@@ -1,0 +1,21 @@
+# HTTP Cookie File for amazon.com by Genuinous @genuinous.
+# To download cookies for this tab click here, or download all cookies.
+# Usage Examples:
+#   1) wget -x --load-cookies cookies.txt "https://alexa.amazon.com/spa/index.html#cards"
+#   2) curl --cookie cookies.txt "https://alexa.amazon.com/spa/index.html#cards"
+#   3) aria2c --load-cookies cookies.txt "https://alexa.amazon.com/spa/index.html#cards"
+#
+alexa.amazon.com	FALSE	/api	FALSE	0	x-amzn-dat-gui-client-v	1.24.208019.0
+alexa.amazon.com	FALSE	/spa	FALSE	253402300799	DISPLAY_DEPRECATION_BANNER_STATUS	false
+alexa.amazon.com	FALSE	/spa	FALSE	0	a2s_csrf	A2SpFvUapLRoLMoXbCLbWSUwX8UsBYj3D
+.amazon.com	TRUE	/	FALSE	2082787127	session-id	136-0312964-9366040
+.amazon.com	TRUE	/	TRUE	1640052909	ubid-main	132-2756933-4066250
+www.amazon.com	FALSE	/	FALSE	1668996897	csm-hit	tb:6GG8T9ZE1QZB5HACWTYR+s-S5YYRCX69N32Z1G85MVE|1608516897084&t:1608516897084&adb:adblk_no
+.amazon.com	TRUE	/	TRUE	1640052909	sid	"VUVgkRJt6dq3uxB8gkLkKA==|ZvNzhKvwQT9hKFlBNBGtmYJejkTc3gBxUjENxMoyLkQ="
+.amazon.com	TRUE	/	FALSE	2082787127	session-token	"lRdYJ8d/OchpUjwE9gKUWJTLNqSOEFRA4h06EBRXwNPp4r2h1pgiUeEFNrXegcdnP3r8TPavz6LC7b20QqPbOsfhgtADGQXJt4BapLibg44EtTBMcjWkp0eKysd3Nn7B4oM0E9ueTetB2yg8tviXJJAwmMZLyGHrkoFGagw+Glm3LZXgtdXT60dgaeVEhc7okA47/4O+x9v6FmSAUtiuqYPcAzuBCBh/FnzdpGTo+kM="
+.amazon.com	TRUE	/	TRUE	1640052909	x-main	Krw1zDlrdvbKNPQL8gsA3TfuDJicOAsg
+.amazon.com	TRUE	/	TRUE	1640052909	at-main	Atza|IwEBIJxT9V_a-sxDf0P9EnLTnBTYwSg0Jj9Gtk_ciaAhs9EDik0twougxzlxY6LaT-CULdNU1ncYWBzVCByNV9Q1WEyz8d9th1U2bPznv7gsy9oab24jbs7XO9Q3zv7SLgDr8KxdiZxuHAsU-SNJ6Alg3ewKRGxZuTCGwBAUGYNozwO9RKBz4tbda-ZNOnAUtj_sezl73vELxsfEU1ea7eS9L90vGWAyZu2AB6J28V5j-a4lSd9EoYMnCqzI3rIuxxFyajHPfsXmCcnFsSSkU-YfXqdI1lVo2TEq5pZSa72-zDa6uQ
+.amazon.com	TRUE	/	TRUE	1640052909	sess-at-main	"4gDFnbbY1fyKx1iwipjTtod6z3zw1YNNFBOqyawMvpg="
+.amazon.com	TRUE	/	FALSE	1924049709	csrf	-649821540
+.amazon.com	TRUE	/	FALSE	2082787127	session-id-time	2082787201l
+skills-store.amazon.com	FALSE	/	TRUE	0	JSESSIONID	2326383E591F0870A5F24FFF362D6AE1

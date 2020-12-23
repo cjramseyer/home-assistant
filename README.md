@@ -1,10 +1,19 @@
-**Current Configuration (Prod):**
+# Home Assistant Configuration
 
-**Home Assistant Version:** v2020.12.1
-**HassOS Version:** 5.8
-**Config Date:** 12/18/2020
+This is the source of my configuration for Home Assistant
 
-**Add-ons installed:**
+----
+
+## Current Configuration
+
+- Home Assistant Version: v2020.12.1
+- HassOS Version: 5.8
+- Config Date: 12/18/2020
+
+----
+
+## Add-ons installed
+
 - AppDaemon 4
 - Dropbox Sync
 - DuckDNS
@@ -18,9 +27,11 @@
 - chrony
 - ink to MQTT
 
-**Operating Environment:** rPi 3B+, 32GB MiniSD Gen10
+**Operating Environment: rPi 3B+, 32GB MiniSD Gen10
 
-**Purpose:**
+----
+
+## Purpose
 
 The purpose of my use of Home Assistant is to automated our home as much as possible, while continuing to maintain the basic functionality of any automated device.
 Switches still function as switches even after they have been made "smart".
@@ -47,3 +58,12 @@ I also try "new" things, such as configuration changes, and/or add-ons.
 
 A big change has been that I did not install MotionEye this time.  I think that might have been part of my problem.
 I am going to re-add cameras to the front-end again, but if I use MotionEye, it will run on a seperate box.  (more to come on this...)
+
+----
+
+## How to contribute
+
+I welcome new ideas, suggestions for improvement, and examples being used in the real world.  I am also interested in solving problems.
+These can all be acheived by opening an issue in this repository.  
+
+----

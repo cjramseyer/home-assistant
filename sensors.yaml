@@ -15,8 +15,8 @@
       resource: https://api.weather.gov/alerts/active/count
       name: NWS Alert Count
       value_template: >
-        {% if value_json.zones.<ZONEHERE> is defined %}
-          {{ value_json.zones.<ZONEHERE> }}
+        {% if value_json.zones.MIZ069 is defined %}
+          {{ value_json.zones.MIZ069 }}
         {% else %}
           0
         {% endif %}
@@ -41,22 +41,6 @@
       resources:
         - type: disk_use_percent
           arg: /home
-        - type: memory_use_percent
-        - type: load_15m
-        - type: load_5m
-        - type: load_1m
-        - type: throughput_network_in
-          arg: eth0
-        - type: processor_use
-    - platform: rest
-      name: wireguard
-      resource: http://a0d7b954-wireguard
-      json_attributes:
-      - cjphone
-      - cjlaptop
-      - jenphone
-      - jenlaptop
-      value_template: "OK"
     - platform: template
       sensors:
         nextdawn:
@@ -100,38 +84,28 @@
           friendly_name: 'Hallway Humidity'
           value_template: '{{ states.climate.hallway_thermostat.attributes.current_humidity }}'
           icon_template: mdi:water-percent
-        wireguard_cjphone:
-          friendly_name: "CJ Phone"
-          value_template: >-
-            {% if state_attr('sensor.wireguard', 'cjphone').latest_handshake > ( as_timestamp(now()) ) -180 %}
-                Connected
-              {% else %}
-                Disconnected
-              {% endif %}
-        wireguard_jenphone:
-          friendly_name: "Jen Phone"
-          value_template: >-
-            {% if state_attr('sensor.wireguard', 'jenphone').latest_handshake > ( as_timestamp(now()) ) -180 %}
-                Connected
-              {% else %}
-                Disconnected
-              {% endif %}
-        wireguard_cjlaptop:
-          friendly_name: "CJ Laptop"
-          value_template: >-
-            {% if state_attr('sensor.wireguard', 'cjlaptop').latest_handshake > ( as_timestamp(now()) ) -180 %}
-                Connected
-              {% else %}
-                Disconnected
-              {% endif %}
-        wireguard_jenlaptop:
-          friendly_name: "Jen Laptop"
-          value_template: >-
-            {% if state_attr('sensor.wireguard', 'jenlaptop').latest_handshake > ( as_timestamp(now()) ) -180 %}
-                Connected
-              {% else %}
-                Disconnected
-              {% endif %}
+    - platform: template
+      sensors:
+        battery_seb:
+          entity_id: device_tracker.google_maps_108388660046996653768
+          friendly_name: 'Seb Battery'
+          value_template: '{{ states.device_tracker.google_maps_108388660046996653768.attributes.battery_level }}'
+          icon_template: mdi:battery-percent
+        battery_tori:
+          entity_id: device_tracker.google_maps_104665180205749213751
+          friendly_name: 'Tori Battery'
+          value_template: '{{ states.device_tracker.google_maps_104665180205749213751.attributes.battery_level }}'
+          icon_template: mdi:battery-percent
+        battery_jen:
+          entity_id: device_tracker.google_maps_109285548108349468571
+          friendly_name: 'Jen Battery'
+          value_template: '{{ states.device_tracker.google_maps_109285548108349468571.attributes.battery_level }}'
+          icon_template: mdi:battery-percent
+        battery_cj:
+          entity_id: device_tracker.google_maps_103298389060901230903
+          friendly_name: 'CJ Battery'
+          value_template: '{{ states.device_tracker.google_maps_103298389060901230903.attributes.battery_level }}'
+          icon_template: mdi:battery-percent
     - platform: command_line
       name: CPU Temperature
       command: "cat /sys/class/thermal/thermal_zone0/temp"
@@ -140,13 +114,13 @@
       value_template: '{{ value | multiply(0.001) | round(1) }}'
     - platform: waze_travel_time
       name: "Jen to Home"
-      origin: device_tracker
-      destination: "address hidden"
+      origin: device_tracker.google_maps_109285548108349468571
+      destination: "2724 Hickory Lawn Rd., Rochester Hills, MI"
       region: 'US'
     - platform: waze_travel_time
       name: "CJ to home"
-      origin: device_tracker
-      destination: "address hidden"
+      origin: device_tracker.google_maps_103298389060901230903
+      destination: "2724 Hickory Lawn Rd., Rochester Hills, MI"
       region: 'US'
     - platform: template
       sensors:
@@ -155,11 +129,19 @@
           entity_id:
           - person.cj
           - person.jen
-          - person.3
-          - person.4
+          - person.seb
+          - person.tori
           value_template: >-
             {{ states.person | map(attribute='state') | select('eq','home') | list | length }}
-    - platform: haveibeenpwned
-      email:
-        - some@email.address
-      api_key: !secret haveibeenpwnedkey
+#    - platform: haveibeenpwned
+#      email:
+#        - cj@ramseyer.org
+#        - cjr351@gmail.com
+#        - hickoryhome19@gmail.com
+#        - jenblankenship@hotmail.com
+#        - jennifer@dreamgardensmi.com
+#        - jennifer@nadigroup.com
+#        - jennifer@dcwestphal.com
+#        - tori@ramseyer.org
+#        - seb@ramseyer.org
+#      api_key: !secret haveibeenpwnedkey

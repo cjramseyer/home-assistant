@@ -1,0 +1,91 @@
+
+- cal_id: cjr351@gmail.com
+  entities:
+  - device_id: cj_ramseyer
+    ignore_availability: true
+    name: CJ Ramseyer
+    track: true
+
+- cal_id: jenblankenship@hotmail.com
+  entities:
+  - device_id: jen_blankenship
+    ignore_availability: true
+    name: Jen Blankenship
+    track: true
+
+- cal_id: hickoryhome19@gmail.com
+  entities:
+  - device_id: hickoryhome19_gmail_com
+    ignore_availability: true
+    name: hickoryhome19@gmail.com
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: true
+
+- cal_id: 6pqi8mu8r9tvdhf1r3teov13r0@group.calendar.google.com
+  entities:
+  - device_id: ramseyer_kids
+    ignore_availability: true
+    name: Ramseyer Kids
+    track: true
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+    track: true
+
+- cal_id: 9l6oru56loajajbs3kd490pb3k@group.calendar.google.com
+  entities:
+  - device_id: dream_gardens
+    ignore_availability: true
+    name: Dream Gardens
+    track: true
+
+- cal_id: oaklandschools.net_ui2reofmavcnhpbnkofv6j0rbk@group.calendar.google.com
+  entities:
+  - device_id: berkley_bands_calendar
+    ignore_availability: true
+    name: Berkley Bands Calendar
+    track: true
+
+- cal_id: jenblankenship23@gmail.com
+  entities:
+  - device_id: jenblankenship23_gmail_com
+    ignore_availability: true
+    name: jenblankenship23@gmail.com
+    track: true
+
+- cal_id: vl8i2dtj864gqbvc68h19j6k233glf6u@import.calendar.google.com
+  entities:
+  - device_id: https_www_berkleyschools_org_core_foxbrightcalendars_feed_de775b2a8397400faf0eef4a11d3c881
+    ignore_availability: true
+    name: https://www.berkleyschools.org/Core/FoxbrightCalendars/Feed/de775b2a8397400faf0eef4a11d3c881/
+    track: true
+
+- cal_id: 0hgo6rjinf3jjiud9g73e4cld4gpnrg5@import.calendar.google.com
+  entities:
+  - device_id: https_www_berkleyschools_org_core_foxbrightcalendars_feed_0550902f31364740bd30a6b342cea462
+    ignore_availability: true
+    name: https://www.berkleyschools.org/Core/FoxbrightCalendars/Feed/0550902f31364740bd30a6b342cea462/
+    track: true
+
+- cal_id: family00659853995146430839@group.calendar.google.com
+  entities:
+  - device_id: family
+    ignore_availability: true
+    name: Family
+    track: true
+
+- cal_id: hkmdlvi4ubnorp86mq1ubricsbnrbco5@import.calendar.google.com
+  entities:
+  - device_id: https_www_berkleyschools_org_core_foxbrightcalendars_feed_5120c6a7d6044a16b952b362c365c931
+    ignore_availability: true
+    name: https://www.berkleyschools.org/Core/FoxbrightCalendars/Feed/5120c6a7d6044a16b952b362c365c931/
+    track: true
