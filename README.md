@@ -14,22 +14,22 @@ Home Assistant is a free and open-source home automation software designed to be
 
 ## Current Configuration
 
-- Home Assistant Version: v2020.12.1
+- Home Assistant Version: v2020.12.2
 - HassOS Version: 5.8
-- Config Date: 12/18/2020
+- Config Date: 1/2/2021
 
 ----
 
 ## Add-ons installed
 
 - AppDaemon 4
-- Dropbox Sync
+- Dropbox Sync (REMOVED)
 - DuckDNS
 - ESPHome
-- File editor
-- Mosquitto broker
+- File editor (REMOVED)
+- Mosquitto broker (REMOVED, suspect memory issues)
 - Node-Red
-- Portainer
+- Portainer (REMOED)
 - Samba share
 - Terminal & SSH
 - chrony
@@ -66,6 +66,11 @@ I also try "new" things, such as configuration changes, and/or add-ons.
 
 A big change has been that I did not install MotionEye this time.  I think that might have been part of my problem.
 I am going to re-add cameras to the front-end again, but if I use MotionEye, it will run on a seperate box.  (more to come on this...)
+
+### 1-2-2020
+
+After upgrading to Home Assistant 2020.12.0 I started to notice a steady exhaustion of memory.  This was idfficult to track down and hopefully I have remediated it.
+Long story short, this started with a reboot at least once a day, and checking all of my automations, addons, and the rest of my configuration.  In the end, I shutdown all the HA addons except Node-Red and AppDaemon4, though still a little higher than I would prefer, the memory use seems to have stablilized at about 65%.  I have moved my moquitto broker to another rPi to run it.
 
 ----
 
