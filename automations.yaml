@@ -27,12 +27,3 @@
   - data:
       name: midnight
     service: frontend.set_theme
-- id: '1608570018261'
-  alias: Zone Notification - CJ(Home)
-  description: ''
-  use_blueprint:
-    path: homeassistant/notify_leaving_zone.yaml
-    input:
-      person_entity: person.cj
-      zone_entity: zone.home
-      notify_device: 558415e5e7c72600216e661fdf07b0ad

@@ -107,3 +107,7 @@
     name: "Jen Busy"
   trigger_coffee:
     name: "Trigger Coffee"
+  find_cj_phone:
+    name: "Find CJ Phone:"
+  find_jen_phone:
+    name: "Find Jen Phone:"

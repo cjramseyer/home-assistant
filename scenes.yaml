@@ -1,0 +1,91 @@
+- id: '1608760373097'
+  name: Jen WFH
+  entities: {}
+- id: '1608760422677'
+  name: CJ WFH (Day)
+  entities:
+    light.cave_main:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      color_temp: 239
+      effect: none
+      friendly_name: Cave main
+      supported_features: 63
+      state: 'on'
+    light.cave_aux:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      color_temp: 221
+      effect: none
+      friendly_name: Cave Aux
+      supported_features: 63
+      state: 'on'
+- id: '1608760582689'
+  name: NetFlix
+  entities:
+    media_player.media_room:
+      source_list:
+      - Local Speaker
+      - G8 ThinQ
+      volume_level: 0.5
+      is_volume_muted: false
+      media_content_type: standby
+      media_position_updated_at: '2020-12-23T21:58:20.711863+00:00'
+      source: Local Speaker
+      available: true
+      last_called: false
+      last_called_timestamp: 1608590981469
+      connected_bluetooth:
+      bluetooth_list:
+      - G8 ThinQ
+      friendly_name: Media Room
+      supported_features: 56253
+      state: standby
+    remote.roku:
+      friendly_name: Roku
+      supported_features: 0
+      state: 'on'
+    media_player.roku:
+      source_list:
+      - Home
+      - Disney Plus
+      - ESPN
+      - FandangoNOW Movies & TV
+      - Google Play Movies & TV
+      - Hulu
+      - IP Camera Viewer - Basic
+      - NBC
+      - Netflix
+      - OXYGEN
+      - PBS
+      - Plex - Stream for Free
+      - Pluto TV - It's Free TV
+      - Prime Video
+      - Roku Tips & Tricks
+      - Sling TV
+      - Spotify Music
+      - The Roku Channel
+      - VUDU
+      - YouTube
+      - YouTube TV
+      media_content_type: app
+      app_id: '12'
+      app_name: Netflix
+      source: Netflix
+      friendly_name: Roku-Media Room
+      entity_picture: /api/media_player_proxy/media_player.roku?token=ebafe9c76ece76f5ddd1d3d9fe36b231d9e0ee5cc30995a13db3154cd79e865c&cache=3490d83cc4e477c2
+      supported_features: 151481
+      device_class: receiver
+      state: 'on'
+    input_boolean.alexa_media_room_donotdisturb:
+      editable: false
+      friendly_name: Alexa Media Room DND
+      state: 'on'

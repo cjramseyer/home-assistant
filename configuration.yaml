@@ -15,6 +15,8 @@ http:
     login_attempts_threshold: 10
 
 recorder:
+    #db_url: mysql://homeassistant:M@yth3f0rceb3w1thyou$$@core-mariadb/homeassistant?charset=utf8
+    commit_interval: 30
     purge_keep_days: 5
     exclude:
         domains:
@@ -32,11 +34,6 @@ recorder:
             - sensor.garbage
             - sensor.recycle
             - sensor.yard_waste
-            - sensor.wireguard
-            - sensor.wireguard_cjphone
-            - sensor.wireguard_jenphone
-            - sensor.wireguard_cjlaptop
-            - sensor.wireguard_jenlaptop
             - sensor.processor_use
             - sensor.network_throughput_in_eth0
             - sensor.memory_use_percent
@@ -61,10 +58,6 @@ tts:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-
-weather:
-  - platform: openweathermap
-    api_key: !secret openweathermap_prod
 
 device_tracker:
   - platform: google_maps

@@ -59,25 +59,10 @@
       - "Off"
       - "Manual"
       - "Disabled"
-  cj_wfh_override:
-    name: "CJ WFH Override"
-    options:
-      - "Auto"
-      - "On"
-      - "Off"
-      - "Manual"
-      - "Disabled"
-  jen_wfh_override:
-    name: "Jen WFH Override"
-    options:
-      - "Auto"
-      - "On"
-      - "Off"
-      - "Manual"
-      - "Disabled"
   exterior_lights_mode:
     name: "Exterior Lights mode"
     options:
       - "General"
       - "Halloween"
       - "Christmas"
+      - "July4"
