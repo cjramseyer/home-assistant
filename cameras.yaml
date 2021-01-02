@@ -1,5 +1,5 @@
   - platform: generic
-    still_image_url: https://icons.wxug.com/data/weather-maps/radar/united-states/cadillac-michigan-region-current-radar.gif
+    still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?num=1&type=N0R&mapx=400&mapy=240&brand=wui&delay=15&frame=0&scale=1&transx=0&transy=0&severe=0&smooth=0&centerx=400&centery=240&station=DTX&rainsnow=0&lightning=0&noclutter=0&showlabels=1&showstorms=0&rand=26819915
     name: Radar WU RH Current
   - platform: generic
     still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?num=10&type=N0R&mapx=400&mapy=240&brand=wui&delay=25&frame=0&scale=1&transx=0&transy=0&severe=1&smooth=0&centerx=400&centery=240&station=DTX&rainsnow=1&lightning=0&noclutter=0&showlabels=1&showstorms=5&rand=25971782

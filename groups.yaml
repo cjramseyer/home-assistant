@@ -17,9 +17,6 @@
       - input_boolean.sebhome
       - input_boolean.houseguests
       - input_boolean.vacation
-      - input_boolean.alexa_cave_donotdisturb
-      - input_boolean.alexa_bedroom_donotdisturb
-      - input_boolean.alexa_kitchen_donotdisturb
   presence:
     name: "Presence"
     entities:
@@ -44,7 +41,6 @@
     name: "Weather"
     entities:
     - sun.sun
-    - sensor.nws_alert_count
   waste:
     name: "Waste Mgmt"
     entities:
@@ -90,12 +86,8 @@
     entities:
     - input_number.heat_comfort_temp
     - input_number.heat_sleep_temp
-    - input_number.heat_eco_temp
     - input_number.cool_comfort_temp
     - input_number.cool_sleep_temp
-    - input_number.cool_eco_temp
-    - input_boolean.cj_notify
-    - input_boolean.jen_notify
   furnace_filter_tracking:
     name: "Furnace Filter Tracking"
     entities:

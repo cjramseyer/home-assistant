@@ -3,7 +3,7 @@
     min: 65
     max: 72
     step: 1
-    initial: 68
+    initial: 70
     mode: box
     unit_of_measurement: deg
     icon: mdi:thermometer

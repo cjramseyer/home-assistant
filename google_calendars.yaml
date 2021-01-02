@@ -13,12 +13,12 @@
     name: Jen Blankenship
     track: true
 
-- cal_id: hickoryhome19@gmail.com
-  entities:
-  - device_id: hickoryhome19_gmail_com
-    ignore_availability: true
-    name: hickoryhome19@gmail.com
-    track: true
+#- cal_id: hickoryhome19@gmail.com
+#  entities:
+#  - device_id: hickoryhome19_gmail_com
+#    ignore_availability: true
+#    name: hickoryhome19@gmail.com
+#    track: true
 
 - cal_id: addressbook#contacts@group.v.calendar.google.com
   entities:

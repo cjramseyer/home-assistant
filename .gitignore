@@ -2,7 +2,7 @@
 # A * ensures that everything will be ignored.
 .google.token
 .google_maps_location_sharing
-alexa_media.consult@techdesk.org.pickle
+alexa_media.cj@techdesk.org.pickle
 .google_maps_location_sharing.cookies.hickoryhome19_gmail_com
 esphome
 appdaemon.yaml
@@ -27,4 +27,4 @@ ip_bans.yaml
 secrets.yaml
 known_devices.yaml
 .google_maps_location_sharing.cookies
-alexa_media.consult@techdesk.org
+alexa_media.cj@techdesk.org
