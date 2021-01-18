@@ -5,20 +5,20 @@
     still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?num=10&type=N0R&mapx=400&mapy=240&brand=wui&delay=25&frame=0&scale=1&transx=0&transy=0&severe=1&smooth=0&centerx=400&centery=240&station=DTX&rainsnow=1&lightning=0&noclutter=0&showlabels=1&showstorms=5&rand=25971782
     name: Radar WU RH
 #  - platform: ffmpeg
-#    input: rtsp://admin:000000@10.20.0.41:554/cam/realmonitor?channel=1&subtype=1
+#    input: !secret camera_front
 #    name: Front Door
   - platform: ffmpeg
-    input: rtsp://admin:000000@10.20.0.41:554/cam/realmonitor?channel=2&subtype=1
+    input: !secret camera_side
     name: Side Door
   - platform: ffmpeg
-    input: rtsp://admin:000000@10.20.0.41:554/cam/realmonitor?channel=3&subtype=1
+    input: !secret camera_deckn
     name: Deck North
   - platform: ffmpeg
-    input: rtsp://admin:000000@10.20.0.41:554/cam/realmonitor?channel=4&subtype=1
+    input: !secret camera_decks
     name: Deck South
   - platform: ffmpeg
-    input: rtsp://admin:000000@10.20.0.41:554/cam/realmonitor?channel=5&subtype=1
+    input: !secret camera_north
     name: North Side
   - platform: ffmpeg
-    input: rtsp://admin:000000@10.20.0.41:554/cam/realmonitor?channel=6&subtype=1
+    input: !secret camera_sump
     name: Sump Pump

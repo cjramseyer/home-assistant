@@ -109,12 +109,8 @@
     entities:
     - sensor.cpu_temperature
     - sensor.processor_use_percent
-    - sensor.load_1m
-    - sensor.load_5m
-    - sensor.load_15m
     - sensor.memory_use_percent
     - sensor.disk_use_percent_home
-    - sensor.network_throughput_in_eth0
   travel_time:
     name: "Travel time"
     entities:

@@ -2,11 +2,11 @@ homeassistant:
     customize: !include customize.yaml
     packages: !include_dir_named packages
 
-frontend:
-  themes: !include_dir_merge_named themes
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
+
+frontend:
+  themes: !include_dir_merge_named themes
 
 cloud:
 
@@ -14,50 +14,9 @@ http:
     ip_ban_enabled: true
     login_attempts_threshold: 10
 
-recorder:
-    #db_url: mysql://homeassistant:M@yth3f0rceb3w1thyou$$@core-mariadb/homeassistant?charset=utf8
-    commit_interval: 30
-    purge_keep_days: 5
-    exclude:
-        domains:
-            - calendar
-            - camera
-            - automation
-            - script
-            - weather
-            - updater
-            - remote
-            - sun
-            - media_player
-        entities:
-            - sensor.lastboot
-            - sensor.garbage
-            - sensor.recycle
-            - sensor.yard_waste
-            - sensor.processor_use
-            - sensor.network_throughput_in_eth0
-            - sensor.memory_use_percent
-            - sensor.load_15m
-            - sensor.load_5m
-            - sensor.load_1m
-            - sensor.house_mode
-            - sensor.uptime
-            - sensor.nextsunrise
-            - sensor.nextsunset
-            - sensor.hacs
-            - sensor.cpu_temperature
-
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-#http:
-#  base_url: hickoryhome2.duckdns.org:8123
-
 # Text to speech
 tts:
   - platform: google_translate
-
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
 
 device_tracker:
   - platform: google_maps
@@ -76,12 +35,14 @@ climate:
   platform: badnest
   scan_interval: 10
 
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
 sensor: !include sensors.yaml
 input_boolean: !include input_boolean.yaml
 input_datetime: !include input_datetime.yaml
 input_number: !include input_number.yaml
 input_select: !include input_select.yaml
-
 camera: !include cameras.yaml
-
 group: !include groups.yaml

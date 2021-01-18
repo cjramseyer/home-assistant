@@ -2,12 +2,12 @@
     name: "Wake time"
     has_time: true
     has_date: false
-    initial: "06:30"
+    initial: "07:30"
   jen_wakeup_time:
     name: "Wake time"
     has_time: true
     has_date: false
-    initial: "07:20"
+    initial: "07:30"
   house_wakeup_time:
     name: "House wake time"
     has_time: true

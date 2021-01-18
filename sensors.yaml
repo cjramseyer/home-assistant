@@ -145,15 +145,36 @@
             float(states('sensor.multisensor2_humidity'))) / 4) | round(2)
             }}
     - platform: rest
-      name: "Media Room Device Info"
+      name: "Media Room Kiosk Device Info"
       json_attributes:
         - batteryLevel
         - screenBrightness
         - isScreenOn
       resource: !secret fully_mediaroom
       value_template: 'OK'
+    - platform: rest
+      name: "Kitchen Kiosk Device Info"
+      json_attributes:
+        - batteryLevel
+        - screenBrightness
+        - isScreenOn
+      resource: !secret fully_kitchen
+      value_template: 'OK'
     - platform: template
       sensors:
-        media_room_battery:
-          friendly_name: 'Media Room Battery'
-          value_template: '{{ states.sensor.media_room_device_info.attributes["batteryLevel"] }}'
+        media_room_panel_battery:
+          friendly_name: 'Media Room Panel Battery'
+          value_template: '{{ states.sensor.media_room_kiosk_device_info.attributes["batteryLevel"] }}'
+        kitchen_panel_battery:
+          friendly_name: 'Kitchen Panel Battery'
+          value_template: '{{ states.sensor.kitchen_kiosk_device_info.attributes["batteryLevel"] }}'
+    - platform: template
+      sensors:
+        cj_wakelight_brightness:
+          friendly_name: "CJ Wake Light Brightness"
+          value_template: '{{ states.light.cj_wake_light.attributes["brightness"] }}'
+    - platform: template
+      sensors:
+        jen_wakelight_brightness:
+          friendly_name: "Jen Wake Light Brightness"
+          value_template: '{{ states.light.jen_wake_light.attributes["brightness"] }}'

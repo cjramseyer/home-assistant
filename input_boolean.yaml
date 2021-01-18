@@ -67,18 +67,6 @@
   node_red:
     name: Node Red Watchdog
     initial: on
-  alexa_media_room_donotdisturb:
-    name: "Alexa Media Room DND"
-    initial: off
-  alexa_master_bedroom_donotdisturb:
-    name: "Alexa Master Bedroom DND"
-    initial: off
-  alexa_kitchen_donotdisturb:
-    name: "Alexa Kitchen DND"
-    initial: off
-  alexa_office_donotdisturb:
-    name: "Alexa Office DND"
-    initial: off
   cj_notify:
     name: "CJ Notifications"
   jen_notify:
@@ -91,8 +79,10 @@
     name: "Dropbox Trigger"
   auto_lights_off:
     name: "Auto Lights Off"
-  nightlight_motion_enabled:
-    name: "Nightlight Motion Enabled"
+  nightlight_motion:
+    name: "Nightlight Motion"
+  kitchen_motion:
+    name: "Kitchen Motion"
   cj_wfh:
     name: "CJ WFH Mode"
   jen_wfh:

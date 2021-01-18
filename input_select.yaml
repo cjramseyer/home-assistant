@@ -7,6 +7,7 @@
       - "Evening"
       - "Night"
       - "Sleep"
+      - "Vacation"
   cj_alarm_autoenable:
     name: Auto Alarm Enable
     options:
@@ -63,6 +64,9 @@
     name: "Exterior Lights mode"
     options:
       - "General"
+      - "Memorial Day"
+      - "July4"
+      - "Labor Day"
       - "Halloween"
       - "Christmas"
-      - "July4"
+
