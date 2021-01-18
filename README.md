@@ -14,28 +14,26 @@ Home Assistant is a free and open-source home automation software designed to be
 
 ## Current Configuration
 
-- Home Assistant Version: v2020.12.2
-- HassOS Version: 5.8
-- Config Date: 1/2/2021
+- Home Assistant Version: v2021.1.4
+- HassOS Version: 5.10
+- Config Date: 1/18/2021
+
+**Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 4GB RAM, 240GB SSD, ProxMox, HA Supervised
 
 ----
 
 ## Add-ons installed
 
 - AppDaemon 4
-- Dropbox Sync (REMOVED)
 - DuckDNS
 - ESPHome
-- File editor (REMOVED)
-- Mosquitto broker (REMOVED, suspect memory issues)
+- File editor
+- Mosquitto broker
 - Node-Red
-- Portainer (REMOED)
 - Samba share
 - Terminal & SSH
 - chrony
 - ink to MQTT
-
-**Operating Environment: rPi 3B+, 32GB MiniSD Gen10
 
 ----
 

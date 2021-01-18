@@ -1,0 +1,44 @@
+#    - platform: rest
+#      resource: https://api.weather.gov/alerts/active/count
+#      name: NWS Alert Count
+#      value_template: >
+#        {% if value_json.zones.MIZ069 is defined %}
+#          {{ value_json.zones.MIZ069 }}
+#        {% else %}
+#          0
+#        {% endif %}
+#      headers:
+#        User-Agent: Homeassistant
+#        Accept: application/ld+json
+#      scan_interval: 60
+
+#    - platform: weatheralerts
+#      state: MI
+#      zone: "069"
+#      county: 125
+
+#    - platform: openweathermap
+#      api_key: !secret openweathermap_prod
+#      scan_interval: 300
+#      monitored_conditions:
+#        - weather
+#        - temperature
+#        - humidity
+#        - wind_speed
+#        - wind_bearing
+#        - clouds
+#        - rain
+#        - snow
+
+#    - platform: haveibeenpwned
+#      email:
+#        - cj@ramseyer.org
+#        - cjr351@gmail.com
+#        - hickoryhome19@gmail.com
+#        - jenblankenship@hotmail.com
+#        - jennifer@dreamgardensmi.com
+#        - jennifer@nadigroup.com
+#        - jennifer@dcwestphal.com
+#        - tori@ramseyer.org
+#        - seb@ramseyer.org
+#      api_key: !secret haveibeenpwnedkey
