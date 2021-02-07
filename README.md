@@ -14,11 +14,11 @@ Home Assistant is a free and open-source home automation software designed to be
 
 ## Current Configuration
 
-- Home Assistant Version: v2021.1.4
+- Home Assistant Version: v2021.2.2
 - HassOS Version: 5.10
-- Config Date: 1/18/2021
+- Config Date: 2/6/2021
 
-**Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 4GB RAM, 240GB SSD, ProxMox, HA Supervised
+**Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 16GB RAM, 240GB SSD, ProxMox, HA Supervised
 
 ----
 
@@ -27,13 +27,17 @@ Home Assistant is a free and open-source home automation software designed to be
 - AppDaemon 4
 - DuckDNS
 - ESPHome
-- File editor
+- File editor (Removed)
 - Mosquitto broker
 - Node-Red
 - Samba share
 - Terminal & SSH
 - chrony
 - ink to MQTT
+- VSCode (Replaced File Editor)
+- Grafana
+- InfluxDB
+- JupyterLab
 
 ----
 
@@ -69,6 +73,11 @@ I am going to re-add cameras to the front-end again, but if I use MotionEye, it 
 
 After upgrading to Home Assistant 2020.12.0 I started to notice a steady exhaustion of memory.  This was idfficult to track down and hopefully I have remediated it.
 Long story short, this started with a reboot at least once a day, and checking all of my automations, addons, and the rest of my configuration.  In the end, I shutdown all the HA addons except Node-Red and AppDaemon4, though still a little higher than I would prefer, the memory use seems to have stablilized at about 65%.  I have moved my moquitto broker to another rPi to run it.
+
+
+### 2-7-2021
+
+Following a couple weeks since my migration to proxmox from rPi3B+ for my HA instance, everything is quicker and considerably more stable.  I have room to update my HA instance should it be necessary.  Future upgrades this year will include setting up a proxmox cluster.  HA doesn't have (yet) cluster capabilities or multi-instance failover.  This will be important to garner further acceptance for the larger installations.  My own setup will be a proxmox cluster, but I'd like to try a Raspberry pi cluster to have a single box solution.
 
 ----
 

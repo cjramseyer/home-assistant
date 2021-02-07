@@ -35,6 +35,12 @@ climate:
   platform: badnest
   scan_interval: 10
 
+notify:
+  - name: HA
+    platform: slack
+    api_key: !secret slack_token
+    default_channel: "#general"
+
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml

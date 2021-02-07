@@ -1,0 +1,50 @@
+input_number:
+  hvac_heating_cur_month:
+    name: "Month Heating Runtime"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
+  hvac_cooling_cur_month:
+    name: "Current Month Cooling Runtime"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
+  hvac_heating_pre_month:
+    name: "Previous Month Heating Runtime"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
+  hvac_cooling_pre_month:
+    name: "Previous Month Cooling Runtime"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
+  hvac_total_cur_month:
+    name: "Current Month Total Runtime"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
+  hvac_total_pre_month:
+    name: "Previous Month Total Runtime"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
+  hvac_diff_pre_month:
+    name: "Difference from previous month"
+    icon: mdi:clock-outline
+    mode: box
+    min: 0
+    max: 500
+    unit_of_measurement: "h"
