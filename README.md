@@ -27,13 +27,14 @@ Home Assistant is a free and open-source home automation software designed to be
 - AppDaemon 4
 - DuckDNS
 - ESPHome
-- File editor
+- File editor (Removed)
 - Mosquitto broker
 - Node-Red
 - Samba share
 - Terminal & SSH
 - chrony
 - ink to MQTT
+- VSCode (Replaced File Editor)
 - Grafana
 - InfluxDB
 - JupyterLab
