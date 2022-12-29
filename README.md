@@ -14,9 +14,9 @@ Home Assistant is a free and open-source home automation software designed to be
 
 ## Current Configuration
 
-- Home Assistant Version: v2021.2.2
-- HassOS Version: 5.10
-- Config Date: 2/6/2021
+- Home Assistant Version: v2022.12.1
+- HassOS Version: 9.4
+- Config Date: 12/29/2022
 
 **Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 16GB RAM, 240GB SSD, ProxMox, HA Supervised
 
@@ -27,7 +27,6 @@ Home Assistant is a free and open-source home automation software designed to be
 - AppDaemon 4
 - DuckDNS
 - ESPHome
-- File editor (Removed)
 - Mosquitto broker
 - Node-Red
 - Samba share
@@ -35,9 +34,6 @@ Home Assistant is a free and open-source home automation software designed to be
 - chrony
 - ink to MQTT
 - VSCode (Replaced File Editor)
-- Grafana
-- InfluxDB
-- JupyterLab
 
 ----
 
@@ -57,17 +53,12 @@ You are free to use my config or any part of it, but I will have no responsibili
 from its application in another config or any changes that are made.
 
 Private information is deliberately removed and will not be revealed, however, you may contact me for suggestions or guidance
-on how it was used.  I can be contacted via email @ cj@ciejepro.com.  I may not be able to respond quickly, please be patient.
+on how it was used.  I can be contacted via email @ cj@ramseyer.org.  I may not be able to respond quickly, please be patient.
 
-As of a totally failed/botched upgrade to 0.105.2/3, I am now maintaining a "dev" instance of Home Assistant.
-This "dev" instance has all the same software installed, and is upgraded prior to upgrading my prod instance.
-While Node-Red is running in dev, most of the automations themselves have been disabled (i.e. turning on the side entry when someone gets homes)
-This is so automations don't conflict with one another.
+### 12-29-2022
 
-I also try "new" things, such as configuration changes, and/or add-ons.
-
-A big change has been that I did not install MotionEye this time.  I think that might have been part of my problem.
-I am going to re-add cameras to the front-end again, but if I use MotionEye, it will run on a seperate box.  (more to come on this...)
+I have upgraded to the (currently) latest version of HA, and it was by far the fastest, and easiest.  Though I was a little concerned with the python update back in June, I had held off, wondering if I was going to have any significant failures.  Thankfully, I had none.  The HA journey continues.
+I am updating my automations, and still using NodeRed.  Now, though, I am taking a slightly different approach.  I am not splitting things up as much as before.
 
 ### 1-2-2020
 
