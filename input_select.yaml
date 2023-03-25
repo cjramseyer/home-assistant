@@ -1,72 +1,154 @@
-  house_mode:
-    name: House Mode
-    options:
-      - "Morning"
-      - "Day"
-      - "Afternoon"
-      - "Evening"
-      - "Night"
-      - "Sleep"
-      - "Vacation"
-  cj_alarm_autoenable:
-    name: Auto Alarm Enable
-    options:
-      - "Weekdays"
-      - "Weekends"
-      - "Both"
-      - "None"
-    initial: "None"
-  cj_alarm_automode:
-    name: Auto Alarm Mode
-    options:
-      - "Alarm Only"
-      - "Alarm + Radio"
-    initial: "Alarm Only"
-  jen_alarm_automode:
-    name: Auto Alarm Mode
-    options:
-      - "Alarm Only"
-      - "Alarm + Radio"
-    initial: "Alarm Only"
-  jen_alarm_autoenable:
-    name: Auto Alarm Enable
-    options:
-      - "Weekdays"
-      - "Weekends"
-      - "Both"
-      - "None"
-    initial: "None"
-  exterior_light_schedule:
-    name: Ext Light Override
-    options:
-      - "Auto"
-      - "On"
-      - "Off"
-      - "Manual"
-      - "Disabled"
-  nightlite_override:
-    name: General Nightlight Override
-    options:
-      - "Auto"
-      - "On"
-      - "Off"
-      - "Manual"
-      - "Disabled"
-  room_nightlite_override:
-    name: Room Nightlight Override
-    options:
-      - "Auto"
-      - "On"
-      - "Off"
-      - "Manual"
-      - "Disabled"
-  exterior_lights_mode:
-    name: "Exterior Lights mode"
-    options:
-      - "General"
-      - "Memorial Day"
-      - "July4"
-      - "Labor Day"
-      - "Halloween"
-      - "Christmas"
-
+house_mode:
+  name: House Mode
+  options:
+    - "Morning"
+    - "Day"
+    - "Afternoon"
+    - "Evening"
+    - "Night"
+    - "Sleep"
+climate_mode:
+  name: Climate Mode
+  options:
+    - "Comfort"
+    - "Sleep"
+    - "Away"
+cj_alarm_autoenable:
+  name: Auto Alarm Enable
+  options:
+    - "Weekdays"
+    - "Weekends"
+    - "Both"
+    - "None"
+  initial: "None"
+cj_alarm_automode:
+  name: Auto Alarm Mode
+  options:
+    - "Alarm Only"
+    - "Alarm + Radio"
+    - "Alarm + Truck"
+    - "Alarm + Truck + Radio"
+  initial: "Alarm Only"
+jen_alarm_automode:
+  name: Auto Alarm Mode
+  options:
+    - "Alarm Only"
+    - "Alarm + Radio"
+  initial: "Alarm Only"
+jen_alarm_autoenable:
+  name: Auto Alarm Enable
+  options:
+    - "Weekdays"
+    - "Weekends"
+    - "Both"
+    - "None"
+  initial: "None"
+exterior_light_mode:
+  name: Ext Light Mode
+  options:
+    - "Auto"
+    - "On"
+    - "Off"
+    - "Manual"
+    - "Disabled"
+nightlite_mode:
+  name: General Nightlight Mode
+  options:
+    - "Auto"
+    - "On"
+    - "Off"
+    - "Manual"
+    - "Disabled"
+room_nightlite_mode:
+  name: Room Nightlight Mode
+  options:
+    - "Auto"
+    - "On"
+    - "Off"
+    - "Manual"
+    - "Disabled"
+landscape_light_mode:
+  name: Landscape Light Mode
+  options:
+    - "Auto"
+    - "On"
+    - "Off"
+    - "Manual"
+    - "Disabled"
+holiday_lights_mode:
+  name: "Holiday Lights mode"
+  options:
+    - "General"
+    - "Memorial Day"
+    - "July4"
+    - "Labor Day"
+    - "Halloween"
+    - "Christmas"
+cj_metabolic_rate:
+  name: "CJ Metabolic Rate"
+  options:
+    - "Sleeping"
+    - "Reclining"
+    - "Sitting"
+    - "Typing"
+    - "Standing"
+    - "Cooking"
+    - "Cleaning"
+    - "Walking - casually"
+    - "Walking - slow"
+    - "Walking - medium"
+    - "Walking - fast"
+    - "Working - light"
+    - "Working - medium"
+    - "Working - heavy"
+    - "Exercise - light"
+    - "Exercise - moderate"
+    - "Exercise - hard"
+cj_clothing:
+  name: "CJ Clothing"
+  options:
+    - "Naked"
+    - "Summer indoor"
+    - "Winter indoor"
+    - "Sweat pants and sweatshirt"
+    - "Sports wear"
+    - "Business Suit - light"
+    - "Business Suit - heavy"
+    - "Coveralls"
+    - "Hospital Gown"
+    - "Pajamas - short"
+    - "Pajamas - long"
+jen_metabolic_rate:
+  name: "Jen Metabolic Rate"
+  options:
+    - "Sleeping"
+    - "Reclining"
+    - "Sitting"
+    - "Typing"
+    - "Standing"
+    - "Cooking"
+    - "Cleaning"
+    - "Walking - casually"
+    - "Walking - slow"
+    - "Walking - medium"
+    - "Walking - fast"
+    - "Working - light"
+    - "Working - medium"
+    - "Working - heavy"
+    - "Exercise - light"
+    - "Exercise - moderate"
+    - "Exercise - hard"
+jen_clothing:
+  name: "Jen Clothing"
+  options:
+    - "Naked"
+    - "Summer indoor"
+    - "Winter indoor"
+    - "Sweat pants and sweatshirt"
+    - "Sports wear"
+    - "Business Suit - light"
+    - "Business Suit - heavy"
+    - "Coveralls"
+    - "Hospital Gown"
+    - "Pajamas - short"
+    - "Pajamas - long"

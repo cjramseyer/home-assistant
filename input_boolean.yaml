@@ -1,103 +1,240 @@
-  occupied:
-    name: Home Occupied
-    initial: off
-    icon: mdi:home
-  cjhome:
-    name: CJ Home
-    initial: off
-    icon: mdi:account
-  jenhome:
-    name: Jen Home
-    initial: off
-    icon: mdi:account
-  torihome:
-    name: Tori Home
-    initial: off
-    icon: mdi:account
-  sebhome:
-    name: Seb Home
-    initial: off
-    icon: mdi:account
-  houseguests:
-    name: House Guests
-    initial: off
-    icon: mdi:account-group
-  vacation:
-    name: Vacation Mode
-    initial: off
-    icon: mdi:airplane
-  cj_alarm_enable:
-    name: "Alarm enable"
-    initial: off # In case of reboot, default to off
-    icon: mdi:calendar-blank
-  cj_alarm_running:
-    name: "Alarm active"
-    initial: off # I disable the system on default on weekends
-    icon: mdi:calendar-blank
-     # Used by Automation to enable Snooze
-  cj_alarm_snooze:
-    name: Snooze
-    initial: off
-    icon: mdi:alarm-snooze
-  cj_alarm_radio:
-    name: Radio
-    initial: off
-    icon: mdi:radio
-  jen_alarm_enable:
-    name: "Alarm enable"
-    initial: off # In case of reboot, default to off
-    icon: mdi:calendar-blank
-  jen_alarm_running:
-    name: "Alarm active"
-    initial: off # I disable the system on default on weekends
-    icon: mdi:calendar-blank
-     # Used by Automation to enable Snooze
-  jen_alarm_snooze:
-    name: Snooze
-    initial: off
-    icon: mdi:alarm-snooze
-  jen_alarm_radio:
-    name: Radio
-    initial: off
-    icon: mdi:radio
-  house_alarm_enable:
-    name: "House Alarm Clock"
-    initial: off
-    icon: mdi:calendar-blank
-  node_red:
-    name: Node Red Watchdog
-    initial: on
-  cj_notify:
-    name: "CJ Notifications"
-  jen_notify:
-    name: "Jen Notifications"
-  maintenance_mode:
-    name: "Maintenance Mode"
-  backup_trigger:
-    name: "Backup Trigger"
-  dropbox_trigger:
-    name: "Dropbox Trigger"
-  auto_lights_off:
-    name: "Auto Lights Off"
-  nightlight_motion:
-    name: "Nightlight Motion"
-  kitchen_motion:
-    name: "Kitchen Motion"
-  cj_wfh:
-    name: "CJ WFH Mode"
-  jen_wfh:
-    name: "Jen WFH Mode"
-  change_filter:
-    name: "Change furnace filter"
-  exterior_light_display:
-    name: "Exterior Light Display"
-  cj_busy:
-    name: "CJ Busy"
-  jen_busy:
-    name: "Jen Busy"
-  trigger_coffee:
-    name: "Trigger Coffee"
-  find_cj_phone:
-    name: "Find CJ Phone:"
-  find_jen_phone:
-    name: "Find Jen Phone:"
+occupied:
+  name: Home Occupied
+  initial: off
+  icon: mdi:home
+cjhome:
+  name: CJ Home
+  initial: off
+  icon: mdi:account
+jenhome:
+  name: Jen Home
+  initial: off
+  icon: mdi:account
+torihome:
+  name: Tori Home
+  initial: off
+  icon: mdi:account
+sebhome:
+  name: Seb Home
+  initial: off
+  icon: mdi:account
+houseguests:
+  name: House Guests
+  initial: off
+  icon: mdi:account-group
+vacation:
+  name: Vacation Mode
+  initial: off
+  icon: mdi:airplane
+cj_alarm_enable:
+  name: "Alarm enable"
+  initial: off # In case of reboot, default to off
+  icon: mdi:calendar-blank
+cj_alarm_running:
+  name: "Alarm active"
+  initial: off # I disable the system on default on weekends
+  icon:
+    mdi:calendar-blank
+    # Used by Automation to enable Snooze
+cj_alarm_snooze:
+  name: Snooze
+  initial: off
+  icon: mdi:alarm-snooze
+cj_alarm_radio:
+  name: Radio
+  initial: off
+  icon: mdi:radio
+cj_alarm_light:
+  name: CJ Light
+  initial: off
+  icon: mdi:lightbulb
+cj_alarm_housemode_activate:
+  name: Housemode Activation
+  initial: off
+jen_alarm_enable:
+  name: "Alarm enable"
+  initial: off # In case of reboot, default to off
+  icon: mdi:calendar-blank
+jen_alarm_running:
+  name: "Alarm active"
+  initial: off # I disable the system on default on weekends
+  icon:
+    mdi:calendar-blank
+    # Used by Automation to enable Snooze
+jen_alarm_snooze:
+  name: Snooze
+  initial: off
+  icon: mdi:alarm-snooze
+jen_alarm_radio:
+  name: Radio
+  initial: off
+  icon: mdi:radio
+jen_alarm_light:
+  name: Jen Light
+  initial: off
+  icon: mdi:lightbulb
+jen_alarm_housemode_activate:
+  name: Housemode Activation
+  initial: off
+house_alarm_enable:
+  name: "House Alarm Clock"
+  initial: off
+  icon: mdi:calendar-blank
+node_red:
+  name: Node Red Watchdog
+  initial: on
+cj_notify:
+  name: "CJ Notifications"
+jen_notify:
+  name: "Jen Notifications"
+maintenance_mode:
+  name: "Maintenance Mode"
+backup_trigger:
+  name: "Backup Trigger"
+dropbox_trigger:
+  name: "Dropbox Trigger"
+auto_lights_off:
+  name: "Auto Lights Off"
+nightlight_motion:
+  name: "Nightlight Motion"
+kitchen_motion:
+  name: "Kitchen Motion"
+cj_wfh:
+  name: "CJ WFH Mode"
+jen_wfh:
+  name: "Jen WFH Mode"
+change_filter:
+  name: "Change furnace filter"
+exterior_light_display:
+  name: "Exterior Light Display"
+  initial: off
+cj_busy:
+  name: "CJ Busy"
+jen_busy:
+  name: "Jen Busy"
+trigger_coffee:
+  name: "Trigger Coffee"
+find_cj_phone:
+  name: "Find CJ Phone:"
+find_jen_phone:
+  name: "Find Jen Phone:"
+cj_comfort_blanket:
+  name: "Blanket"
+cj_comfort_sheet:
+  name: "Sheet"
+cj_comfort_chair:
+  name: "Chair"
+cj_comfort_armchair:
+  name: "Armchair"
+cj_comfort_jacket:
+  name: "Jacket"
+jen_comfort_blanket:
+  name: "Blanket"
+jen_comfort_sheet:
+  name: "Sheet"
+jen_comfort_chair:
+  name: "Chair"
+jen_comfort_armchair:
+  name: "Armchair"
+jen_comfort_jacket:
+  name: "Jacket"
+side_trigger_stream:
+  name: "Side Trigger Stream"
+front_trigger_stream:
+  name: "Front Trigger Stream"
+north_trigger_stream:
+  name: "North Trigger Stream"
+too_cold:
+  name: "Too cold"
+too_warm:
+  name: "Too warm"
+morning:
+  name: "Morning"
+sleep:
+  name: "Sleep"
+cj_commute_report:
+  name: "CJ Commute Report"
+  initial: off
+jen_commute_report:
+  name: "Jen Commute Report"
+  initial: off
+hvac_override:
+  name: "HVAC Override"
+  initial: off
+outdoors:
+  name: "Outdoor activities"
+  initial: off
+cj_alarm_truck:
+  name: "CJ Truck"
+cj_cal_truck:
+  name: "CJ Truck (Cal)"
+jen_alarm_truck:
+  name: "Jen Truck"
+jen_cal_truck:
+  name: "Jen Truck (Cal)"
+all_lights_switch:
+  name: "All Lights Switch"
+  initial: off
+return_from_vaca_trigger:
+  name: "Return from Vacation Trigger"
+living_presence:
+  name: "Living Room"
+media_presence:
+  name: "Media Room"
+kitchen_presence:
+  name: "Kitchen"
+dining_presence:
+  name: "Dining Room"
+laundry_presence:
+  name: "Laundry Room"
+mainbath_presence:
+  name: "Main Bathroom"
+master_presence:
+  name: "Master Bedroom"
+masterbath_presence:
+  name: "Master Bathroom"
+studio_presence:
+  name: Studio
+office_oresence:
+  name: Office
+cave_presence:
+  name: "Cave"
+basement_presence:
+  name: "Basement"
+deck_presence:
+  name: "Deck"
+frontporch_presence:
+  name: "Front Porch"
+sidedeck_presence:
+  name: "Side Deck"
+patio_presence:
+  name: "Patio"
+firepit_presence:
+  name: "Fire Pit"
+driveway_presence:
+  name: "Driveway"
+barn_presence:
+  name: "Barn"
+polebarn_presence:
+  name: "Pole Barn"
+washer_state:
+  name: "Washer State"
+dryer_state:
+  name: "Dryer State"
+cj_sleeping:
+  name: "CJ Sleeping"
+jen_sleeping:
+  name: "Jen Sleeping"
+sleep_override:
+  name: "Sleep Automation override"
+  initial: off
+trash_out:
+  name: "Take out Trash"
+recycling_out:
+  name: "Take out Recycling"
+yardwaste_out:
+  name: "Take out Yard Waste"
+ha_remote_override:
+  name: "HA Remote Override"
+lights_sun_override:
+  name: "Lights Sun override"

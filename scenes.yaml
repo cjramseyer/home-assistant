@@ -11,7 +11,7 @@
       - colorloop
       - random
       brightness: 255
-      color_temp: 239
+      color_temp: 280
       effect: none
       friendly_name: Cave main
       supported_features: 63
@@ -23,23 +23,26 @@
       - colorloop
       - random
       brightness: 255
-      color_temp: 221
+      color_temp: 280
       effect: none
       friendly_name: Cave Aux
       supported_features: 63
       state: 'on'
-- id: '1608760582689'
-  name: Media Room (Movie)
+- id: '1652154931774'
+  name: Studio - Relaxed
   entities:
-    input_boolean.alexa_media_room_donotdisturb:
-      editable: false
-      friendly_name: Alexa Media Room DND
+    light.first_light:
+      effect_list:
+      - effect_pulse
+      - effect_stop
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Studio Lamp
+      supported_features: 37
       state: 'on'
-- id: '1610142678531'
-  name: Master Bedroom (Movie)
-  entities:
-    light.02240033dc4f227acfe6:
-      brightness: 38
-      friendly_name: Master Bedroom light
-      supported_features: 1
+    switch.shelly1_93f489:
+      friendly_name: Studio Salt Lamp
       state: 'on'
+  icon: mdi:chair-rolling

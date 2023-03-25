@@ -1,0 +1,8 @@
+sensor:
+  - name: "Canon MX410 Ink Level"
+    state_topic: "ink2mqtt/CanonMX410"
+    unique_id: "CanonMX410Ink"
+    unit_of_measurement: "%"
+  - name: "Node-Red"
+    state_topic: "checkin/nodered"
+    expire_after: 600

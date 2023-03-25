@@ -1,6 +1,8 @@
 homeassistant:
-    customize: !include customize.yaml
-    packages: !include_dir_named packages
+  customize: !include customize.yaml
+  packages: !include_dir_named packages
+  allowlist_external_dirs:
+    - /config
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
@@ -11,8 +13,11 @@ frontend:
 cloud:
 
 http:
-    ip_ban_enabled: true
-    login_attempts_threshold: 10
+  ip_ban_enabled: true
+  login_attempts_threshold: 10
+
+recorder:
+  db_url: mysql://homeassistant:<SECRET>@core-mariadb/homeassistant?charset=utf8mb4
 
 # Text to speech
 tts:
@@ -22,33 +27,22 @@ device_tracker:
   - platform: google_maps
     username: !secret presence_user
 
-google:
-    client_id: !secret google_cal_clientid_prod
-    client_secret: !secret google_cal_clientsecret_prod
+folder_watcher:
+  - folder: /config
+    patterns:
+      - "*.yaml"
 
-badnest:
-  issue_token: !secret badnest_token
-  cookie: !secret badnest_cookie
-  region: us
-
-climate:
-  platform: badnest
-  scan_interval: 10
-
-notify:
-  - name: HA
-    platform: slack
-    api_key: !secret slack_token
-    default_channel: "#general"
-
+sensor rest: !include_dir_merge_list sensors/
+switch: !include switches.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-
 sensor: !include sensors.yaml
 input_boolean: !include input_boolean.yaml
+input_button: !include input_button.yaml
 input_datetime: !include input_datetime.yaml
 input_number: !include input_number.yaml
 input_select: !include input_select.yaml
+input_text: !include input_text.yaml
 camera: !include cameras.yaml
 group: !include groups.yaml

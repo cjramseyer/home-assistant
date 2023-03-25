@@ -1,0 +1,21 @@
+coffee_started:
+  name: Coffee Started
+  initial: 00:00:00
+teams_status:
+  name: MS Teams Status
+  icon: mdi:microsoft-teams
+teams_activity:
+  name: MS Teams Activity
+  icon: mdi:phone-off
+extlights_time:
+  name: Exterior Lights Time
+gennightlight_time:
+  name: General Nightlight Time
+roomnightlight_time:
+  name: Room Nightlight Time
+landscapelight_time:
+  name: Landscape light Time
+room_presence:
+  name: Room Presence
+ha_remote_access:
+  name: "HA Remote Access"

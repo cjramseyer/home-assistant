@@ -1,36 +1,56 @@
-  heat_comfort_temp:
-    name: " Heat Comfort Temp"
-    min: 65
-    max: 72
-    step: 1
-    initial: 70
-    mode: box
-    unit_of_measurement: deg
-    icon: mdi:thermometer
-  heat_sleep_temp:
-    name: "Heat Sleep Temp"
-    min: 62
-    max: 68
-    step: 1
-    initial: 65
-    mode: box
-    unit_of_measurement: deg
-    icon: mdi:thermometer
-  cool_comfort_temp:
-    name: "Cool Comfort Temp"
-    min: 70
-    max: 85
-    step: 1
-    initial: 75
-    mode: box
-    unit_of_measurement: deg
-    icon: mdi:thermometer
-  cool_sleep_temp:
-    name: "Cool Sleep Temp"
-    min: 70
-    max: 85
-    step: 1
-    initial: 78
-    mode: box
-    unit_of_measurement: deg
-    icon: mdi:thermometer
+comfort_temp:
+  name: "Comfort Temp"
+  min: 65
+  max: 85
+  step: 1
+  mode: box
+  unit_of_measurement: deg
+  icon: mdi:thermometer
+sleep_temp:
+  name: "Sleep Temp"
+  min: 65
+  max: 85
+  step: 1
+  mode: box
+  unit_of_measurement: deg
+  icon: mdi:thermometer
+away_temp:
+  name: "Away Temp"
+  min: 65
+  max: 85
+  step: 1
+  mode: box
+  unit_of_measurement: deg
+  icon: mdi:thermometer
+average_outdoor_temp:
+  name: "Avg Outdoor Temp"
+  min: -20
+  max: 125
+  step: 1
+  mode: box
+  unit_of_measurement: deg
+  icon: mdi:thermometer
+motion_delay:
+  name: "Motion Delay"
+  min: 30
+  max: 600
+  initial: 180
+  step: 5
+  mode: slider
+  unit_of_measurement: "s"
+cj_fuel_cost_limit:
+  name: "CJ Fuel Cost Limit"
+  min: 20.00
+  max: 200.00
+  initial: 50
+  step: 1
+  mode: slider
+  unit_of_measurement: "$"
+jen_fuel_cost_limit:
+  name: "Jen Fuel Cost Limit"
+  min: 20.00
+  max: 200.00
+  initial: 50
+  step: 1
+  mode: slider
+  unit_of_measurement: "$"

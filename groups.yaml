@@ -1,34 +1,42 @@
-  climate:
-    name: "Climate"
-    entities:
-      - climate.hallway_thermostat
-  house_general:
-    name: "General House options"
-    entities:
-      - sensor.house_mode
-      - input_boolean.house_alarm_enable
-      - input_datetime.house_wakeup_time
-      - sensor.nextsunrise
-      - sensor.nextsunset
-      - input_boolean.occupied
-      - input_boolean.cjhome
-      - input_boolean.jenhome
-      - input_boolean.torihome
-      - input_boolean.sebhome
-      - input_boolean.houseguests
-      - input_boolean.vacation
-  presence:
-    name: "Presence"
-    entities:
+climate:
+  name: "Climate"
+  entities:
+    - climate.hallway
+house_general:
+  name: "General House options"
+  entities:
+    - sensor.house_mode
+    - input_boolean.house_alarm_enable
+    - input_datetime.house_wakeup_time
+    - sensor.nextsunrise
+    - sensor.nextsunset
+    - input_boolean.occupied
+    - input_boolean.cjhome
+    - input_boolean.jenhome
+    - input_boolean.torihome
+    - input_boolean.sebhome
+    - input_boolean.houseguests
+    - input_boolean.vacation
+presence:
+  name: "Presence"
+  entities:
     - sensor.people_home
     - person.cj
     - person.jen
     - person.tori
     - person.seb
     - person.guest
-  sensors:
-    name: "Sensors"
-    entities:
+homeaway:
+  name: "Home/Away"
+  entities:
+    - input_boolean.cjhome
+    - input_boolean.jenhome
+    - input_boolean.torihome
+    - input_boolean.sebhome
+    - input_boolean.houseguests
+sensors:
+  name: "Sensors"
+  entities:
     - binary_sensor.multisensor_motion
     - sensor.multisensor_temperature
     - sensor.multisensor_humidity
@@ -37,41 +45,41 @@
     - sensor.hallway_humidity
     - binary_sensor.leak_sensor_1_ch_a
     - binary_sensor.leak_sensor_2_ch_a
-  weather:
-    name: "Weather"
-    entities:
+weather:
+  name: "Weather"
+  entities:
     - sun.sun
-  waste:
-    name: "Waste Mgmt"
-    entities:
-      - sensor.garbage
-      - sensor.recycle
-      - sensor.yard_waste
-  cj_alarm_clock:
-    name: "CJ Alarm clock"
-    entities: # Add all entities here that should be part of the widget
-      - input_boolean.cj_alarm_enable
-      - input_select.cj_alarm_autoenable
-      - input_select.cj_alarm_automode
-      - input_boolean.cj_alarm_running
-      - input_boolean.cj_alarm_snooze
-      - input_boolean.cj_alarm_radio
-      - input_datetime.cj_wakeup_time
-      - light.cj_wake_light
-  jen_alarm_clock:
-    name: "Jen Alarm clock"
-    entities: # Add all entities here that should be part of the widget
-      - input_boolean.jen_alarm_enable
-      - input_select.jen_alarm_autoenable
-      - input_select.jen_alarm_automode
-      - input_boolean.jen_alarm_running
-      - input_boolean.jen_alarm_snooze
-      - input_boolean.jen_alarm_radio
-      - input_datetime.jen_wakeup_time
-      - light.jen_wake_light
-  maintenance_status:
-    name: "Maintenance Status"
-    entities:
+waste:
+  name: "Waste Mgmt"
+  entities:
+    - sensor.garbage
+    - sensor.recycle
+    - sensor.yard_waste
+cj_alarm_clock:
+  name: "CJ Alarm clock"
+  entities: # Add all entities here that should be part of the widget
+    - input_boolean.cj_alarm_enable
+    - input_select.cj_alarm_autoenable
+    - input_select.cj_alarm_automode
+    - input_boolean.cj_alarm_running
+    - input_boolean.cj_alarm_snooze
+    - input_boolean.cj_alarm_radio
+    - input_datetime.cj_wakeup_time
+    - light.cj_wake_light
+jen_alarm_clock:
+  name: "Jen Alarm clock"
+  entities: # Add all entities here that should be part of the widget
+    - input_boolean.jen_alarm_enable
+    - input_select.jen_alarm_autoenable
+    - input_select.jen_alarm_automode
+    - input_boolean.jen_alarm_running
+    - input_boolean.jen_alarm_snooze
+    - input_boolean.jen_alarm_radio
+    - input_datetime.jen_wakeup_time
+    - light.jen_wake_light
+maintenance_status:
+  name: "Maintenance Status"
+  entities:
     - sensor.hacs
     - binary_sensor.updater
     - sensor.uptime
@@ -81,16 +89,16 @@
     - sensor.node_red
     - input_boolean.maintenance_mode
     - switch.sensor_restart
-  comfort_settings:
-    name: "Comfort Settings"
-    entities:
+comfort_settings:
+  name: "Comfort Settings"
+  entities:
     - input_number.heat_comfort_temp
     - input_number.heat_sleep_temp
     - input_number.cool_comfort_temp
     - input_number.cool_sleep_temp
-  furnace_filter_tracking:
-    name: "Furnace Filter Tracking"
-    entities:
+furnace_filter_tracking:
+  name: "Furnace Filter Tracking"
+  entities:
     - sensor.hvac_action
     - input_number.hvac_runtime
     - sensor.average_total_runtime_week
@@ -104,23 +112,32 @@
     - sensor.heating_before_last_filter_change
     - sensor.heating_time_last_7_days
     - sensor.heating_time_yesterday
-  system:
-    name: "System status"
-    entities:
-    - sensor.cpu_temperature
+system:
+  name: "System status"
+  entities:
     - sensor.processor_use_percent
     - sensor.memory_use_percent
     - sensor.disk_use_percent_home
-  travel_time:
-    name: "Travel time"
-    entities:
+travel_time:
+  name: "Travel time"
+  entities:
     - sensor.cj_to_home
     - sensor.jen_to_home
-  cave:
-    name: "Cave"
-    entities:
+cave:
+  name: "Cave"
+  entities:
     - sensor.cave_temperature
     - sensor.cave_humidity
     - light.cave_main
     - light.cave_aux
-
+lights:
+  name: "Lights"
+  entities:
+    - light.cave_main
+    - light.cave_aux
+    - light.first_light
+    - light.jen_wake_light
+    - light.cj_wake_light
+    - switch.shelly1_93f489
+    - switch.shelly1_c4fdf1
+    - switch.shelly1_c4eb2d

@@ -1,180 +1,241 @@
-    - platform: uptime
-    - platform: version
-      name: "Current Version"
-      source: local
-    - platform: template
-      sensors:
-        friendly_wind_direction:
-          friendly_name: 'Wind Direction'
-          value_template: >-
-            {%if states.sensor.openweathermap_wind_bearing.state | float<=11 %}N
-            {% elif states.sensor.openweathermap_wind_bearing.state | float>348 %}N
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=34 | float>11 %}NNE
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=56 | float>34 %}NE
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=79 | float>56 %}ENE
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=101 | float>79 %}E
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=124 | float>101 %}ESE
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=146 | float>124 %}SE
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=169 | float>146 %}SSE
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=191 | float>169 %}S
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=214 | float>191 %}SSW
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=236 | float>214 %}SW
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=259 | float>236 %}WSW
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=281 | float>259 %}W
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=304 | float>281 %}WNW
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=326 | float>304 %}NW
-            {% elif states.sensor.openweathermap_wind_bearing.state | float<=348 | float>326 %}NNW
-            {%- endif %}
-    - platform: mqtt
-      name: "Node-Red"
-      state_topic: "checkin/nodered"
-      expire_after: 600
-    - platform: mqtt
-      name: "Canon MX410 Ink Level"
-      state_topic: "ink2mqtt/CanonMX410"
-      unique_id: "CanonMX410Ink"
-      unit_of_measurement: '%'
-    - platform: systemmonitor
-      resources:
-        - type: processor_use
-        - type: memory_use_percent
-        - type: disk_use_percent
-          arg: /home
-    - platform: template
-      sensors:
-        nextdawn:
-          friendly_name: 'Next Dawn'
-          value_template: >
-            {{ as_timestamp(states.sun.sun.attributes.next_dawn) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
-        nextdusk:
-          friendly_name: 'Next Dusk'
-          value_template: >
-            {{ as_timestamp(states.sun.sun.attributes.next_dusk) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
-        nextmidnight:
-          friendly_name: 'Next Midnight'
-          value_template: >
-            {{ as_timestamp(states.sun.sun.attributes.next_midnight) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
-        nextnoon:
-          friendly_name: 'Next Noon'
-          value_template: >
-            {{ as_timestamp(states.sun.sun.attributes.next_noon) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
-        nextsunrise:
-          friendly_name: 'Next Sunrise'
-          value_template: >
-            {{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
-          icon_template: mdi:weather-sunset-up
-        nextsunset:
-          friendly_name: 'Next Sunset'
-          value_template: >
-            {{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
-          icon_template: mdi:weather-sunset-down
-        house_mode:
-          friendly_name: 'House Mode'
-          value_template: '{{ states.input_select.house_mode.state }}'
-        hallway_temperature:
-          friendly_name: 'Hallway Temperature'
-          value_template: '{{ states.climate.hallway_thermostat.attributes.current_temperature }}'
-          icon_template: mdi:temperature-fahrenheit
-        hallway_humidity:
-          friendly_name: 'Hallway Humidity'
-          value_template: '{{ states.climate.hallway_thermostat.attributes.current_humidity }}'
-          icon_template: mdi:water-percent
-        outside_temperature:
-          friendly_name: "Outside Temperature"
-          value_template: '{{ states.weather.openweathermap.attributes.temperature }}'
-        outside_humidity:
-          friendly_name: "Outside Humidity"
-          value_template: '{{ states.weather.openweathermap.attributes.humidity }}'
-          icon_template: mdi:water-percent
-    - platform: template
-      sensors:
-        battery_seb:
-          friendly_name: 'Seb Battery'
-          value_template: '{{ states.device_tracker.google_maps_108388660046996653768.attributes.battery_level }}'
-          icon_template: mdi:battery-percent
-        battery_tori:
-          friendly_name: 'Tori Battery'
-          value_template: '{{ states.device_tracker.google_maps_104665180205749213751.attributes.battery_level }}'
-          icon_template: mdi:battery-percent
-        battery_jen:
-          friendly_name: 'Jen Battery'
-          value_template: '{{ states.device_tracker.google_maps_109285548108349468571.attributes.battery_level }}'
-          icon_template: mdi:battery-percent
-        battery_cj:
-          friendly_name: 'CJ Battery'
-          value_template: '{{ states.device_tracker.google_maps_103298389060901230903.attributes.battery_level }}'
-          icon_template: mdi:battery-percent
-    - platform: command_line
-      name: CPU Temperature
-      command: "cat /sys/class/thermal/thermal_zone0/temp"
-      # If errors occur, make sure configuration file is encoded as UTF-8
-      unit_of_measurement: "°C"
-      value_template: '{{ value | multiply(0.001) | round(1) }}'
-    - platform: waze_travel_time
-      name: "Jen to Home"
-      origin: device_tracker.google_maps_109285548108349468571
-      destination: "2724 Hickory Lawn Rd., Rochester Hills, MI"
-      region: 'US'
-    - platform: waze_travel_time
-      name: "CJ to home"
-      origin: device_tracker.google_maps_103298389060901230903
-      destination: "2724 Hickory Lawn Rd., Rochester Hills, MI"
-      region: 'US'
-    - platform: template
-      sensors:
-        people_home:
-          friendly_name: "# People Home"
-          value_template: >-
-            {{ states.person | map(attribute='state') | select('eq','home') | list | length }}
-    - platform: template
-      sensors:
-        average_temperature:
-          friendly_name: "Average Temperature"
-          value_template: >-
-            {{ ((float(states('sensor.cave_temperature')) +
-            float(states('sensor.hallway_temperature')) +
-            float(states('sensor.multisensor_temperature')) +
-            float(states('sensor.multisensor2_temperature'))) / 4) | round(2)
-            }}
-        average_humidity:
-          friendly_name: "Average Humidity"
-          value_template: >-
-            {{ ((float(states('sensor.cave_humidity')) +
-            float(states('sensor.hallway_humidity')) +
-            float(states('sensor.multisensor_humidity')) +
-            float(states('sensor.multisensor2_humidity'))) / 4) | round(2)
-            }}
-    - platform: rest
-      name: "Media Room Kiosk Device Info"
-      json_attributes:
-        - batteryLevel
-        - screenBrightness
-        - isScreenOn
-      resource: !secret fully_mediaroom
-      value_template: 'OK'
-    - platform: rest
-      name: "Kitchen Kiosk Device Info"
-      json_attributes:
-        - batteryLevel
-        - screenBrightness
-        - isScreenOn
-      resource: !secret fully_kitchen
-      value_template: 'OK'
-    - platform: template
-      sensors:
-        media_room_panel_battery:
-          friendly_name: 'Media Room Panel Battery'
-          value_template: '{{ states.sensor.media_room_kiosk_device_info.attributes["batteryLevel"] }}'
-        kitchen_panel_battery:
-          friendly_name: 'Kitchen Panel Battery'
-          value_template: '{{ states.sensor.kitchen_kiosk_device_info.attributes["batteryLevel"] }}'
-    - platform: template
-      sensors:
-        cj_wakelight_brightness:
-          friendly_name: "CJ Wake Light Brightness"
-          value_template: '{{ states.light.cj_wake_light.attributes["brightness"] }}'
-    - platform: template
-      sensors:
-        jen_wakelight_brightness:
-          friendly_name: "Jen Wake Light Brightness"
-          value_template: '{{ states.light.jen_wake_light.attributes["brightness"] }}'
+- platform: version
+  name: "Current Version"
+  source: local
+- platform: template
+  sensors:
+    friendly_wind_direction:
+      friendly_name: "Wind Direction"
+      value_template: >-
+        {%if states.sensor.openweathermap_wind_bearing.state | float<=11 %}N
+        {% elif states.sensor.openweathermap_wind_bearing.state | float>348 %}N
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=34 | float>11 %}NNE
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=56 | float>34 %}NE
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=79 | float>56 %}ENE
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=101 | float>79 %}E
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=124 | float>101 %}ESE
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=146 | float>124 %}SE
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=169 | float>146 %}SSE
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=191 | float>169 %}S
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=214 | float>191 %}SSW
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=236 | float>214 %}SW
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=259 | float>236 %}WSW
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=281 | float>259 %}W
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=304 | float>281 %}WNW
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=326 | float>304 %}NW
+        {% elif states.sensor.openweathermap_wind_bearing.state | float<=348 | float>326 %}NNW
+        {%- endif %}
+    friendly_wind_speed:
+      friendly_name: "Wind Speed"
+      value_template: >-
+        {{ ((float(states('sensor.openweathermap_wind_speed')) * 2.237)) | round(2) }}
+- platform: systemmonitor
+  resources:
+    - type: processor_use
+    - type: memory_use_percent
+    - type: disk_use_percent
+      arg: /home
+- platform: template
+  sensors:
+    sunelevation:
+      friendly_name: "Sun Elevation"
+      value_template: >
+        {{ states.sun.sun.attributes.elevation }}
+    sunazimuth:
+      friendly_name: "Sun Azimuth"
+      value_template: >
+        {{ states.sun.sun.attributes.azimuth }}
+    nextdawn:
+      friendly_name: "Next Dawn"
+      value_template: >
+        {{ as_timestamp(states.sun.sun.attributes.next_dawn) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
+    nextdusk:
+      friendly_name: "Next Dusk"
+      value_template: >
+        {{ as_timestamp(states.sun.sun.attributes.next_dusk) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
+    nextmidnight:
+      friendly_name: "Next Midnight"
+      value_template: >
+        {{ as_timestamp(states.sun.sun.attributes.next_midnight) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
+    nextnoon:
+      friendly_name: "Next Noon"
+      value_template: >
+        {{ as_timestamp(states.sun.sun.attributes.next_noon) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
+    nextsunrise:
+      friendly_name: "Next Sunrise"
+      value_template: >
+        {{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
+      icon_template: mdi:weather-sunset-up
+    nextsunset:
+      friendly_name: "Next Sunset"
+      value_template: >
+        {{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom(' %I:%M %p') | replace(" 0", "") }}
+      icon_template: mdi:weather-sunset-down
+    house_mode:
+      friendly_name: "House Mode"
+      value_template: "{{ states.input_select.house_mode.state }}"
+    climate_mode:
+      friendly_name: "Climate Mode"
+      value_template: "{{ states.input_select.climate_mode.state }}"
+    hallway_temperature:
+      friendly_name: "Hallway Temperature"
+      value_template: "{{ states.climate.hallway.attributes.current_temperature }}"
+      icon_template: mdi:temperature-fahrenheit
+    outside_temperature:
+      friendly_name: "Outside Temperature"
+      value_template: "{{ states.weather.openweathermap.attributes.temperature }}"
+    outside_humidity:
+      friendly_name: "Outside Humidity"
+      value_template: "{{ states.weather.openweathermap.attributes.humidity }}"
+      icon_template: mdi:water-percent
+- platform: template
+  sensors:
+    battery_seb:
+      friendly_name: "Seb Battery"
+      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      icon_template: mdi:battery-percent
+    battery_tori:
+      friendly_name: "Tori Battery"
+      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      icon_template: mdi:battery-percent
+    battery_jen:
+      friendly_name: "Jen Battery"
+      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      icon_template: mdi:battery-percent
+    battery_cj:
+      friendly_name: "CJ Battery"
+      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      icon_template: mdi:battery-percent
+- platform: template
+  sensors:
+    people_home:
+      friendly_name: "# People Home"
+      value_template: >-
+        {{ states.person | map(attribute='state') | select('eq','home') | list | length }}
+    rooms_occupied:
+      friendly_name: "# Rooms Occupied"
+      value_template: >
+        {{[ states.input_boolean.living_presence,
+            states.input_boolean.media_presence,
+            states.input_boolean.kitchen_presence,
+            states.input_boolean.dining_presence,
+            states.input_boolean.laundry_presence,
+            states.input_boolean.mainbath_presence,
+            states.input_boolean.master_presence,
+            states.input_boolean.masterbath_presence,
+            states.input_boolean.studio_presence,
+            states.input_boolean.office_oresence,
+            states.input_boolean.cave_presence,
+            states.input_boolean.basement_presence,
+            states.input_boolean.deck_presence,
+            states.input_boolean.frontporch_presence,
+            states.input_boolean.sidedeck_presence,
+            states.input_boolean.patio_presence,
+            states.input_boolean.firepit_presence,
+            states.input_boolean.driveway_presence,
+            states.input_boolean.barn_presence,
+            states.input_boolean.polebarn_presence]
+          | selectattr('state', 'eq', 'on') | list | count}}
+- platform: template
+  sensors:
+    average_temperature:
+      friendly_name: "Average Temperature"
+      value_template: >-
+        {{ ((float(states('sensor.hallway_temperature')) +
+        float(states('sensor.cave_multisensor_temperature')) +
+        float(states('sensor.kitchen_multisensor_temperature')) +
+        float(states('sensor.master_multisensor_temperature'))) / 4) | round(2)
+        }}
+    average_humidity:
+      friendly_name: "Average Humidity"
+      value_template: >-
+        {{ ((float(states('sensor.hallway_humidity')) +
+        float(states('sensor.cave_multisensor_humidity')) +
+        float(states('sensor.kitchen_multisensor_humidity')) +
+        float(states('sensor.master_multisensor_humidity'))) / 4) | round(2)
+        }}
+- platform: template
+  sensors:
+    target_temp:
+      friendly_name: "Target Temp"
+      value_template: >-
+        {{ states.climate.hallway.attributes["temperature"] }}
+- platform: template
+  sensors:
+    cj_wakelight_brightness:
+      friendly_name: "CJ Wake Light Brightness"
+      value_template: '{{ states.light.cj_wake_light.attributes["brightness"] }}'
+- platform: template
+  sensors:
+    jen_wakelight_brightness:
+      friendly_name: "Jen Wake Light Brightness"
+      value_template: '{{ states.light.jen_wake_light.attributes["brightness"] }}'
+- platform: template
+  sensors:
+    in_out_temp_difference:
+      friendly_name: "Indoor/Outdoor Temp Difference"
+      value_template: >-
+        {{ ((float(states('sensor.hallway_temperature_2')) -
+        float(states('sensor.openweathermap_temperature')))) | round(2)
+        }}
+- platform: template
+  sensors:
+    cj_fuel_to_fill:
+      friendly_name: "CJ Fuel to Fill"
+      value_template: >-
+        {{ (36 - 35 * ((states('sensor.fordpass_fuel')|float / 100))) | round(2)}}
+- platform: template
+  sensors:
+    cj_cost_to_fill:
+      friendly_name: "CJ Cost to Fill"
+      value_template: >-
+        {{ ((float(states('sensor.cj_fuel_to_fill')) * float(states('sensor.costco')))) | round(2) }}
+- platform: time_date
+  display_options:
+    - "time"
+    - "date"
+    - "date_time"
+    - "date_time_utc"
+    - "date_time_iso"
+    - "time_date"
+    - "time_utc"
+    - "beat"
+- platform: template
+  sensors:
+    12hr_time:
+      friendly_name: "12hr time"
+      value_template: "{{ as_timestamp(states('sensor.date_time_iso')) | timestamp_custom('%I:%M %p') }}"
+- platform: template
+  sensors:
+    teams_status:
+      friendly_name: "MS Teams Status"
+      value_template: "{{states('input_text.teams_status')}}"
+      icon_template: "{{state_attr('input_text.teams_status','icon')}}"
+      unique_id: sensor.teams_status
+    teams_activity:
+      friendly_name: "MS Teams Activity"
+      value_template: "{{states('input_text.teams_activity')}}"
+      unique_id: sensor.teams_activity
+- platform: template
+  sensors:
+    exttimer_status:
+      friendly_name: "Ext Lights Status"
+      value_template: "{{states('input_text.extlights_time')}}"
+    roomtimer_status:
+      friendly_name: "Room Nightlights Status"
+      value_template: "{{states('input_text.roomnightlight_time')}}"
+    nighttimer_status:
+      friendly_name: "General Nightlights Status"
+      value_template: "{{states('input_text.gennightlight_time')}}"
+    landscapetimer_status:
+      friendly_name: "Landscape Lights Status"
+      value_template: "{{states('input_text.landscapelight_time')}}"
+    roompresence:
+      friendly_name: "Room Presence"
+      value_template: "{{states('input_text.room_presence')}}"
+- platform: mold_indicator
+  name: "mold potential"
+  indoor_temp_sensor: sensor.hallway_temperature
+  indoor_humidity_sensor: sensor.hallway_humidity
+  outdoor_temp_sensor: sensor.openweathermap_temperature
+  calibration_factor: 2.0
+# calibration_factor = (temp_indoor - temp_outdoor) / (temp_criticalpoint - temp_outdoor)

@@ -1,15 +1,31 @@
-  cj_wakeup_time:
-    name: "Wake time"
-    has_time: true
-    has_date: false
-    initial: "07:30"
-  jen_wakeup_time:
-    name: "Wake time"
-    has_time: true
-    has_date: false
-    initial: "07:30"
-  house_wakeup_time:
-    name: "House wake time"
-    has_time: true
-    has_date: false
-    initial: "09:00"
+cj_wakeup_time:
+  name: "Wake time"
+  has_time: true
+  has_date: false
+  initial: "07:30"
+jen_wakeup_time:
+  name: "Wake time"
+  has_time: true
+  has_date: false
+  initial: "07:30"
+house_wakeup_time:
+  name: "House wake time"
+  has_time: true
+  has_date: false
+  initial: "09:00"
+last_time_home_cj:
+  name: CJ Last Seen
+  has_date: true
+  has_time: true
+last_time_home_jen:
+  name: Jen Last Seen
+  has_date: true
+  has_time: true
+last_time_home_tori:
+  name: Tori Last Seen
+  has_date: true
+  has_time: true
+last_time_home_seb:
+  name: Seb Last Seen
+  has_date: true
+  has_time: true
