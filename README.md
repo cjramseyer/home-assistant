@@ -60,6 +60,10 @@ on how it was used.  I can be contacted via email @ cj@ramseyer.org.  I may not 
 I have moved on from AppDaemon.  While it never failed to function, and remained "usable", it was not "pretty", and could not really be customized in ways similar to HA dashboards.  Though I would still prefer a dashboard solution to have them not require a user id and password that must be maintained, perhaps it's better this way.  climate management has been near completely moved into HA.  We currently have the Nest thermostat, and it's "smarts" aren't really that smart anymore.  All of it's smart functions have been disabled on the thermostat itself, and the intelligience (i.e. when we are home versus away versus vacation.  When everyone is sleeping.  When someone is too warm or cold) has been moved into HA.  Climate is a funny and complex thing to manage.  While the house might not be "cold", someone might feel cold for a variety of reasons.  My goal is to add data and inteligience to this all within HA.  This also enables me to switch to another smart thermostat in the future, requiring little, if any change.
 Now over 2 years running HA on a VM under proxmox.  Still running very stable, and reliable.  My next big task is room occupancy.
 
+Other relatively big changes include, Alexa is removed and no longer exists in our house.  Privacy concerns, lack of functionality, stupid responses, and inability to work the way a voice assistant should, plus the additional features, we don't need/want.  The voice assistant functions will be replaced by HA and/or DIY, and I will build microphone/speaker modules to put around the house.  This will maintain privacy and do exactly what we want and nothing we don't.
+
+Outside sensors and controls are also important this year including irrigation, driveway sensor, mailbox, etc.
+
 ### 12-29-2022
 
 I have upgraded to the (currently) latest version of HA, and it was by far the fastest, and easiest.  Though I was a little concerned with the python update back in June, I had held off, wondering if I was going to have any significant failures.  Thankfully, I had none.  The HA journey continues.
