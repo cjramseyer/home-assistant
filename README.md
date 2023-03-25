@@ -14,11 +14,12 @@ Home Assistant is a free and open-source home automation software designed to be
 
 ## Current Configuration
 
-- Home Assistant Version: v2022.12.1
-- HassOS Version: 9.4
-- Config Date: 12/29/2022
+- Home Assistant Version: v2023.3.5
+- Supervisor: 2023.3.2
+- Operating System 9.5
+- Config Date: 3/25/2023 (effective configuration)
 
-**Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 16GB RAM, 240GB SSD, ProxMox, HA Supervised
+**Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 16GB RAM, 240GB SSD, ProxMox, HA Supervised.  HA VM 6GB vRAM + 40GB disk.
 
 ----
 
