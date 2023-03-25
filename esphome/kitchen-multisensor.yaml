@@ -1,0 +1,42 @@
+esphome:
+  name: kitchen-multisensor
+  friendly_name: kitchen_multisensor
+
+esp8266:
+  board: nodemcuv2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "cAzM38HZTBPQ2opfZgiVUoLif7Uk6F9kYsEcIJgoNe4="
+
+ota:
+  password: "a59da34e41e26545dc0585cf179e77c7"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Kitchen-Multisensor"
+    password: "kVnIqSYrDfz2"
+
+captive_portal:
+
+sensor:
+  - platform: dht
+    pin: D7
+    temperature:
+      name: "Temperature"
+    humidity:
+      name: "Humidity"
+
+binary_sensor:
+  - platform: gpio
+    pin: D5
+    name: "Motion"
+    device_class: motion

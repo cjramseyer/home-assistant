@@ -1,0 +1,29 @@
+esphome:
+  name: package-locker
+  friendly_name: package_locker
+
+esp8266:
+  board: nodemcuv2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "i7w43tabDEV0y7DstJ5BN46L94MOlfT46XrAIELighQ="
+
+ota:
+  password: "2437ebfdf9fe9f4c7d778e129429f48c"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Package-Locker Fallback Hotspot"
+    password: "mX4NFaQWsp0R"
+
+captive_portal:
+    
