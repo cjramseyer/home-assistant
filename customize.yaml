@@ -1,14 +1,14 @@
 input_select.house_mode:
   hidden: true
-device_tracker.google_maps_103298389060901230903:
+device_tracker.google_maps_<SECRET>:
   friendly_name: CJ
   hidden: true
-device_tracker.google_maps_104665180205749213751:
+device_tracker.google_maps_<SECRET>:
   friendly_name: Tori
   hidden: true
-device_tracker.google_maps_108388660046996653768:
+device_tracker.google_maps_<SECRET>:
   friendly_name: Seb
   hidden: true
-device_tracker.google_maps_109285548108349468571:
+device_tracker.google_maps_<SECRET>:
   friendly_name: Jen
   hidden: true
