@@ -11,6 +11,7 @@ google_calendars.yaml
 /nest
 /tts
 /prep
+/blueprints
 
 
 # You can whitelist files/folders with !, these will not be ignored.
