@@ -12,7 +12,7 @@ google_calendars.yaml
 /tts
 /prep
 /blueprints
-
+/HA_VERSION
 
 # You can whitelist files/folders with !, these will not be ignored.
 !*.yaml
