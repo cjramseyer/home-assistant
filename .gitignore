@@ -6,7 +6,7 @@
 cameras.yaml
 google_calendars.yaml
 /themes
-/deps
+/custom_components
 /node_red
 /nest
 /tts
