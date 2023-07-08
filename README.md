@@ -14,10 +14,10 @@ Home Assistant is a free and open-source home automation software designed to be
 
 ## Current Configuration
 
-- Home Assistant Version: v2023.3.5
-- Supervisor: 2023.3.2
-- Operating System 9.5
-- Config Date: 3/25/2023 (effective configuration)
+- Home Assistant Version: v2023.7.1
+- Supervisor: 2023.7.1
+- Operating System 10.3
+- Config Date: 7/8/2023 (effective configuration)
 
 **Operating Environment:** Dell OptiPlex 3040 - i3-6100T, 16GB RAM, 240GB SSD, ProxMox, HA Supervised.  HA VM 6GB vRAM + 40GB disk.
 
@@ -35,6 +35,8 @@ Home Assistant is a free and open-source home automation software designed to be
 - Studio Code Server
 - Cloudflared
 - Maria DB
+- ADGuard Home
+- Home Assistant Google Drive Backup
 
 ----
 
@@ -54,7 +56,13 @@ You are free to use my config or any part of it, but I will have no responsibili
 from its application in another config or any changes that are made.
 
 Private information is deliberately removed and will not be revealed, however, you may contact me for suggestions or guidance
-on how it was used.  I can be contacted via email @ cj@ramseyer.org.  I may not be able to respond quickly, please be patient.
+on how it was used.  I can be contacted via email @ cj <at> ramseyer.org.  I may not be able to respond quickly, please be patient.
+
+### 7-8-2023
+
+HA Backups, and backup redundancy are now in place using the Google Drive backup addon.  Automated daily backups get completed onto the NAS in our house, then also get copied out to Google drive for the dedicated HA user (15GB) worth of storage, so that should continue to be free for the foreseeable future.  Working on room presence sensors and automation.  Our Google Nest thermostat continues to get less smart everyday.  I am seeking local control replacements that actually function.  I previously tried a Radio Thermostat, which required an Apple product to configure.  That's not a real sound setup in this modern age.  When I contacted their support about it, they asked if I could borrow an Apple device.  I promptly returned it.  Seems the work for Voice in HA is progressing very quickly, so since Alexa and Google Assistant are banned from our house (lots of reasons), I may try to implement that late this year.
+
+Until a few months ago, outside of HA, I had several other services setup via port forwarding and open ports in the firewall in order for them to function.  One of them Vaultwarden, did not function well (could not create NEW entries when not on local network).  All open ports are now closed, all port forwarding is disabled.  I moved from that method to using private tunnels (with rules and authentication).  some of the services I have available also authenticate using my Azure M365 tenant, so I have MFA enabled as well helping to make security stronger.
 
 ### 3-25-2023
 
