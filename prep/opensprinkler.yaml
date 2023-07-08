@@ -1,0 +1,174 @@
+################################################################################
+#
+# OpenSprinkler Configuration Package - Default 8 zones
+# Author: CJ Ramseyer
+# Copyright (C) 2022, Clayton J. Ramseyer, All Rights Reserved
+#
+# No warranties provided or implied.  Use of this solution is at own risk
+#
+# When adding components for additional zone, entity names MUST be lower-case
+# Assumptions:
+# - 8 zone sprinkler system
+# - Default ALL Zones OFF
+# - Default 15 minute runtime per zone
+#
+################################################################################
+
+input_boolean:
+  enable_irrigation:
+    name: "Enable Irrigation"
+  enable_pump:
+    name: "Enable Pump"
+  enable_zone1:
+    name: "Enable Zone 1"
+    initial: off
+  enable_zone2:
+    name: "Enable Zone 2"
+    initial: off
+  enable_zone3:
+    name: "Enable Zone 3"
+    initial: off
+  enable_zone4:
+    name: "Enable Zone 4"
+    initial: off
+  enable_zone5:
+    name: "Enable Zone 5"
+    initial: off
+  enable_zone6:
+    name: "Enable Zone 6"
+    initial: off
+  enable_zone7:
+    name: "Enable Zone 7"
+    initial: off
+  enable_zone8:
+    name: "Enable Zone 8"
+    initial: off
+
+input_datetime:
+  zone1_time:
+    name: "Zone 1 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone2_time:
+    name: "Zone 2 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone3_time:
+    name: "Zone 3 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone4_time:
+    name: "Zone 4 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone5_time:
+    name: "Zone 5 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone6_time:
+    name: "Zone 6 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone7_time:
+    name: "Zone 7 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+  zone8_time:
+    name: "Zone 8 time"
+    has_time: true
+    has_date: false
+    initial: "07:00"
+
+input_number:
+  zone1_runtime:
+    name: "Zone 1 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone2_runtime:
+    name: "Zone 2 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone3_runtime:
+    name: "Zone 3 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone4_runtime:
+    name: "Zone 4 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone5_runtime:
+    name: "Zone 5 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone6_runtime:
+    name: "Zone 6 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone7_runtime:
+    name: "Zone 7 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+  zone8_runtime:
+    name: "Zone 8 Runtime"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    initial: 15
+
+input_text:
+  pump:
+    name: "Pump"
+    initial: "OFF"
+  zone1:
+    name: "Zone 1"
+    initial: "OFF"
+  zone2:
+    name: "Zone 2"
+    initial: "OFF"
+  zone3:
+    name: "Zone 3"
+    initial: "OFF"
+  zone4:
+    name: "Zone 4"
+    initial: "OFF"
+  zone5:
+    name: "Zone 5"
+    initial: "OFF"
+  zone6:
+    name: "Zone 6"
+    initial: "OFF"
+  zone7:
+    name: "Zone 7"
+    initial: "OFF"
+  zone8:
+    name: "Zone 8"
+    initial: "OFF"
