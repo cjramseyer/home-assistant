@@ -19,3 +19,6 @@ room_presence:
   name: Room Presence
 ha_remote_access:
   name: "HA Remote Access"
+food_response:
+  name: Food Response
+  initial: "No Response"

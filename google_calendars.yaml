@@ -1,0 +1,24 @@
+- cal_id: hickoryhome19@gmail.com
+  entities:
+    - device_id: HA Calendar
+      name: HA Calendar
+      search: "#CJTruck"
+      track: true
+
+- cal_id: cjr351@gmail.com
+  entities:
+  - device_id: cjr351_gmail_com
+    ignore_availability: true
+    name: cjr351@gmail.com
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+
+- cal_id: jenblankenship23@gmail.com
+  entities:
+  - device_id: jenblankenship23_gmail_com
+    ignore_availability: true
+    name: jenblankenship23@gmail.com

@@ -1,0 +1,37 @@
+animated_background:
+  default_url: "http://10.20.0.21:8123/local/mp4/ypy8bw9fgw1zv2b4htp2.hd.mp4"
+  entity: sensor.house_mode
+  state_url:
+    Morning:
+      - "http://10.20.0.21:8123/local/mp4/Rising_Above_the_Clouds_at_Sunset.mp4"
+      - "http://10.20.0.21:8123/local/mp4/sparkling_ocean_waves.mp4"
+      - "http://10.20.0.21:8123/local/mp4/Wooden_landscape_with_flare_on_camera.mp4"
+    Day:
+      - "http://10.20.0.21:8123/local/mp4/hlhff0h8md4ev0kju5be.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/zjqsoc6ecqhntpl5vacs.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/jvw1avupguhfbo11betq.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/8cmeusxf3pkanai43djs.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/guwb10mfddctfvwioaex.hd.mp4"
+    Afternoon:
+      - "http://10.20.0.21:8123/local/mp4/hlhff0h8md4ev0kju5be.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/zjqsoc6ecqhntpl5vacs.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/jvw1avupguhfbo11betq.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/8cmeusxf3pkanai43djs.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/guwb10mfddctfvwioaex.hd.mp4"
+    Evening:
+      - "http://10.20.0.21:8123/local/mp4/hlhff0h8md4ev0kju5be.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/zjqsoc6ecqhntpl5vacs.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/jvw1avupguhfbo11betq.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/8cmeusxf3pkanai43djs.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/guwb10mfddctfvwioaex.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/j881lvy0uz2syc1pnz39.hd.mp4"
+    Night:
+      - "http://10.20.0.21:8123/local/mp4/x9dr8caygivq5secll7i.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/v26zyfd6yf0r33s46vpe.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/ypy8bw9fgw1zv2b4htp2.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/rosz2gi676xhkiw1ut6i.hd.mp4"
+    Sleep:
+      - "http://10.20.0.21:8123/local/mp4/x9dr8caygivq5secll7i.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/v26zyfd6yf0r33s46vpe.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/ypy8bw9fgw1zv2b4htp2.hd.mp4"
+      - "http://10.20.0.21:8123/local/mp4/rosz2gi676xhkiw1ut6i.hd.mp4"

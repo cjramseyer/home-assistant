@@ -1,6 +1,3 @@
-- platform: version
-  name: "Current Version"
-  source: local
 - platform: template
   sensors:
     friendly_wind_direction:
@@ -87,23 +84,26 @@
       friendly_name: "Outside Humidity"
       value_template: "{{ states.weather.openweathermap.attributes.humidity }}"
       icon_template: mdi:water-percent
+    cj_presence_state:
+      friendly_name: "CJ Presence state"
+      value_template: "{{ states.input_select.cj_presence_state.state }}"
 - platform: template
   sensors:
     battery_seb:
       friendly_name: "Seb Battery"
-      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      value_template: "{{ states.device_tracker.google_maps_108388660046996653768.attributes.battery_level }}"
       icon_template: mdi:battery-percent
     battery_tori:
       friendly_name: "Tori Battery"
-      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      value_template: "{{ states.device_tracker.google_maps_104665180205749213751.attributes.battery_level }}"
       icon_template: mdi:battery-percent
     battery_jen:
       friendly_name: "Jen Battery"
-      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      value_template: "{{ states.device_tracker.google_maps_109285548108349468571.attributes.battery_level }}"
       icon_template: mdi:battery-percent
     battery_cj:
       friendly_name: "CJ Battery"
-      value_template: "{{ states.device_tracker.google_maps_<SECRET>.attributes.battery_level }}"
+      value_template: "{{ states.device_tracker.google_maps_103298389060901230903.attributes.battery_level }}"
       icon_template: mdi:battery-percent
 - platform: template
   sensors:
@@ -185,10 +185,22 @@
         {{ (36 - 35 * ((states('sensor.fordpass_fuel')|float / 100))) | round(2)}}
 - platform: template
   sensors:
+    jen_fuel_to_fill:
+      friendly_name: "Jen Fuel to Fill"
+      value_template: >-
+        {{ (36 - 35 * ((states('sensor.fordpass_fuel')|float / 100))) | round(2)}}
+- platform: template
+  sensors:
     cj_cost_to_fill:
       friendly_name: "CJ Cost to Fill"
       value_template: >-
-        {{ ((float(states('sensor.cj_fuel_to_fill')) * float(states('sensor.costco')))) | round(2) }}
+        {{ ((float(states('sensor.cj_fuel_to_fill')) * float(states('sensor.costco_brown')))) | round(2) }}
+- platform: template
+  sensors:
+    jen_cost_to_fill:
+      friendly_name: "Jen Cost to Fill"
+      value_template: >-
+        {{ ((float(states('sensor.jen_fuel_to_fill')) * float(states('sensor.costco_brown')))) | round(2) }}
 - platform: time_date
   display_options:
     - "time"
@@ -232,10 +244,9 @@
     roompresence:
       friendly_name: "Room Presence"
       value_template: "{{states('input_text.room_presence')}}"
-- platform: mold_indicator
-  name: "mold potential"
-  indoor_temp_sensor: sensor.hallway_temperature
-  indoor_humidity_sensor: sensor.hallway_humidity
-  outdoor_temp_sensor: sensor.openweathermap_temperature
-  calibration_factor: 2.0
-# calibration_factor = (temp_indoor - temp_outdoor) / (temp_criticalpoint - temp_outdoor)
+    food_response:
+      friendly_name: "Food Response"
+      value_template: "{{states('input_text.food_response')}}"
+    guest_devices:
+      friendly_name: "Guest Devices"
+      value_template: "{{ state_attr('sensor.unifics','Guest') }}"

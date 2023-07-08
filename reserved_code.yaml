@@ -1,0 +1,48 @@
+- theme: Backend-selected
+  title: Lights
+  path: lights
+  type: custom:grid-layout
+  layout:
+    grid-template-columns: 33% auto 33%
+    grid-template-rows: auto
+    grid-template-areas: |
+      "headerl headerc headerr"
+      ". messages ."
+      "left middle right"
+      ". footer ."
+  badges: []
+  cards:
+    - type: markdown
+      content: Footer
+      view_layout:
+        grid-area: footer
+    - square: false
+      columns: 1
+      type: grid
+      cards:
+        - type: entity
+          entity: sensor.house_mode
+      view_layout:
+        grid-area: headerc
+    - square: false
+      columns: 3
+      type: grid
+      cards:
+        - type: entity
+          entity: sensor.people_home
+        - type: entity
+          entity: sensor.time
+      view_layout:
+        grid-area: headerr
+    - type: grid
+      cards: []
+      view_layout:
+        grid-area: left
+    - type: grid
+      cards: []
+      view_layout:
+        grid-area: right
+    - type: grid
+      cards: []
+      view_layout:
+        grid-area: middle

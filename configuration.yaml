@@ -17,7 +17,7 @@ http:
   login_attempts_threshold: 10
 
 recorder:
-  db_url: mysql://homeassistant:<SECRET>@core-mariadb/homeassistant?charset=utf8mb4
+  db_url: mysql://homeassistant:Redbud23$$@core-mariadb/homeassistant?charset=utf8mb4
 
 # Text to speech
 tts:
@@ -32,11 +32,22 @@ folder_watcher:
     patterns:
       - "*.yaml"
 
+mqtt:
+  sensor:
+    - state_topic: "ink2mqtt/CanonMX410"
+      name: "Canon MX410 Ink Level"
+      unique_id: "CanonMX410Ink"
+      unit_of_measurement: "%"
+    - state_topic: "checkin/nodered"
+      name: "Node-Red"
+      expire_after: 600
+
 sensor rest: !include_dir_merge_list sensors/
 switch: !include switches.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+binary_sensor: !include binary_sensor.yaml
 sensor: !include sensors.yaml
 input_boolean: !include input_boolean.yaml
 input_button: !include input_button.yaml

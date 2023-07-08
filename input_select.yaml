@@ -152,3 +152,12 @@ jen_clothing:
     - "Hospital Gown"
     - "Pajamas - short"
     - "Pajamas - long"
+cj_presence_state:
+  name: "CJ Presence Status"
+  options:
+    - "Extended Away"
+    - "Away"
+    - "Just left"
+    - "Arriving"
+    - "Just arrived"
+    - "Home"

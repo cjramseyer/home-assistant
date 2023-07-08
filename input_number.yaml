@@ -54,3 +54,9 @@ jen_fuel_cost_limit:
   step: 1
   mode: slider
   unit_of_measurement: "$"
+avg_outdoor_temp_counter:
+  name: "Avg Outdoor Temp Counter"
+  min: 0
+  max: 5
+  initial: 0
+  step: 1

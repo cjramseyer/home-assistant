@@ -2,3 +2,9 @@ morning:
   name: "Morning"
 sleep:
   name: "Sleep"
+cj_nap:
+  name: "CJ Nap"
+jen_nap:
+  name: "Jen Nap"
+ask_food:
+  name: "Food?"

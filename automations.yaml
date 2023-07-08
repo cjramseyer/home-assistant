@@ -1,1 +1,129 @@
-[]
+- id: '1658013376662'
+  alias: Find CJ Phone
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.find_cj_phone
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 7f15697e17ca1d0265065b2ed10e93e8
+    domain: mobile_app
+    type: notify
+    message: command_ringer_mode
+    title: normal
+  - device_id: 7f15697e17ca1d0265065b2ed10e93e8
+    domain: mobile_app
+    type: notify
+    message: command_volume_level
+    title: 100
+  - device_id: 7f15697e17ca1d0265065b2ed10e93e8
+    domain: mobile_app
+    type: notify
+    message: command_launch_app
+    data:
+      channel: music_stream
+      data:
+        package_name: com.spotify.music
+  - device_id: 7f15697e17ca1d0265065b2ed10e93e8
+    domain: mobile_app
+    type: notify
+    message: command_media
+    title: play
+    data:
+      channel: com.spotify.music
+  - device_id: 7f15697e17ca1d0265065b2ed10e93e8
+    domain: mobile_app
+    type: notify
+    message: command_volume_level
+    title: 100
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id: input_boolean.find_cj_phone
+  mode: single
+- id: '1658013376666'
+  alias: FIND Jen Phone
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.find_jen_phone
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 11288d05ad9bebd0f37774c3fca41df1
+    domain: mobile_app
+    type: notify
+    message: command_ringer_mode
+    title: normal
+  - device_id: 11288d05ad9bebd0f37774c3fca41df1
+    domain: mobile_app
+    type: notify
+    message: command_volume_level
+    title: 100
+    data:
+      channel: notification_stream
+  - device_id: 11288d05ad9bebd0f37774c3fca41df1
+    domain: mobile_app
+    type: notify
+    message: command_volume_level
+    title: 100
+    data:
+      channel: ring_stream
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id: input_boolean.find_jen_phone
+  mode: single
+- id: '1684438909644'
+  alias: 'House - Food: Ask about food'
+  description: Daily food inquiry
+  trigger:
+  - platform: time
+    at: '12:00:00'
+    enabled: false
+  - platform: state
+    entity_id:
+    - input_button.ask_food
+  action:
+  - service: notify.mobile_app_cj_s22
+    data:
+      message: What do you want to eat?
+      data:
+        actions:
+        - action: REPLY
+          title: Reply
+          behavior: textinput
+          textInputButtonTitle: Send
+          textInputPlaceholder: Enter food details
+- id: '1684439154820'
+  alias: 'House - Food: Handle food response'
+  description: ''
+  trigger:
+    platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: REPLY
+  action:
+  - variables:
+      food_text: '{{ trigger.event.data.reply_text }}'
+  - service: input_text.set_value
+    data:
+      entity_id: input_text.food_response
+      value: '{{ food_text }}'
+  mode: single
+- id: '1684439514137'
+  alias: 'House - Food: Return food response'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_text.food_response
+  action:
+  - service: notify.mobile_app_cj_s22
+    data:
+      message: 'Food Choice: {{ states(''input_text.food_response'') }}'
+  mode: single

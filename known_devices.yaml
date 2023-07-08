@@ -1,0 +1,49 @@
+
+google_maps_109285548108349468571:
+  name: google_maps_109285548108349468571
+  mac:
+  icon:
+  picture: https://lh5.googleusercontent.com/-jvf3VZy_v1k/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckIQzT0VTO5CFEBWD0F7WJKDnccVQ/photo.jpg
+  track: true
+
+google_maps_103298389060901230903:
+  name: google_maps_103298389060901230903
+  mac:
+  icon:
+  picture: https://lh3.googleusercontent.com/a-/AOh14Ggm8eX1O08R5eN-cpcgM1v_Be47cZ49RQ0ARQnPgw
+  track: true
+
+google_maps_108388660046996653768:
+  name: google_maps_108388660046996653768
+  mac:
+  icon:
+  picture: https://lh5.googleusercontent.com/-PyDSkKEVdqg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucn-E5VBTJPlSxHMDyXOCHNu4tTdfg/photo.jpg
+  track: true
+
+google_maps_104665180205749213751:
+  name: google_maps_104665180205749213751
+  mac:
+  icon:
+  picture: https://lh3.googleusercontent.com/a-/AOh14GinkfJ7aH75tO5C88bQibqQ34bbcGpcGXgYmcZe
+  track: true
+
+guest:
+  name: Guest
+  mac: FF:FF:FF:FF:FF:FF
+  icon:
+  picture:
+  track: true
+
+device_name_1:
+  name: device_name_1
+  mac:
+  icon:
+  picture:
+  track: true
+
+google_maps_109053292372251975014:
+  name: google_maps_109053292372251975014
+  mac:
+  icon:
+  picture: https://lh3.googleusercontent.com/a-/ACB-R5SWwPyBihPUAcuXEvtcP6lfxAyxH9FCEHM_OCS1JA
+  track: true

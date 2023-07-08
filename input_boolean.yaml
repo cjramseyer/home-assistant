@@ -22,6 +22,10 @@ houseguests:
   name: House Guests
   initial: off
   icon: mdi:account-group
+melissahome:
+  name: Melissa Home
+  initial: off
+  icon: mdi:account
 vacation:
   name: Vacation Mode
   initial: off
@@ -238,3 +242,5 @@ ha_remote_override:
   name: "HA Remote Override"
 lights_sun_override:
   name: "Lights Sun override"
+night_time:
+  name: "Night Time"
