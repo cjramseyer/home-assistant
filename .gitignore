@@ -2,18 +2,22 @@
 # A * ensures that everything will be ignored.
 .google.token
 .google_maps_location_sharing.cookies.hickoryhome19_gmail_com
-esphome
-appdaemon.yaml
+/esphome
 cameras.yaml
 google_calendars.yaml
 /themes
-/appdaemon
+/deps
+/node_red
+/nest
+/tts
+/prep
+
 
 # You can whitelist files/folders with !, these will not be ignored.
 !*.yaml
 !.gitignore
 !*.md
-!*.yml
+!*.yaml
 
 # Ignore folders.
 .storage
